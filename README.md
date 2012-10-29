@@ -34,7 +34,7 @@ Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailin
 
 #### Keymap
 
-There is currently only one default keymap defined by *Trimmer*, and that is for the **Mac**. For *Linux* and *Windows*, you will need to manually add a *Key Binding* for the command named `trimmer`.
+There is currently only one default keymap defined by *Trimmer*, and that is for the **Mac**. For **Linux** and **Windows**, you will need to manually add a *Key Binding* for the command named `trimmer`.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `not mapped`
