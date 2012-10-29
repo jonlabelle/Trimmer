@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Trimmer: Remove trailing whitespace and save.",
+        "command": "trimmer"
+    }
+]
