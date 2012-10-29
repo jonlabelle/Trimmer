@@ -17,11 +17,11 @@ Open the `Command Palette...` --> `Package Control: Install Package` and search 
 
 1. Locate your Sublime Text 2 `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
 2. Run the following command from your `Packages` directory:
-  - `git clone https://github.com/jonlabelle/trimmer "Trimmer"`
+  - `git clone https://github.com/jonlabelle/Trimmer "Trimmer"`
 
 ##### Manually install
 
-1. [Download](https://github.com/jonlabelle/trimmer/zipball/master) the the zip.
+1. [Download](https://github.com/jonlabelle/Trimmer/zipball/master) the the zip.
 2. Copy the *Trimmer* folder to your Sublime Text 2 *Packages* directory.
   - **Mac**: `~/Library/Application Support/Sublime Text 2/Packages`
   - **Linux**: `~/.Sublime Text 2/Packages`
