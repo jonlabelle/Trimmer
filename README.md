@@ -40,11 +40,11 @@ There is currently only one default keymap defined by *Trimmer*, and that is for
 - **Linux**: `not mapped`
 - **Windows**: `not mapped`
 
-#### Command
+#### Sublime Text Command
 
 - `trimmer`
 
-Remove trailing whitespace from lines and save.
+Description: Remove trailing whitespace from each line and save.
 
 Author
 ------
