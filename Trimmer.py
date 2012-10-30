@@ -15,13 +15,11 @@ class TrimmerCommand(sublime_plugin.TextCommand):
             view.erase(edit, r)
 
         view.end_edit(edit)
+        sublime.set_timeout(lambda: self.save(view), 10)
 
-        sublime.set_timeout(lambda: self.save(), 100)
-
-    def save(self):
-        if self.view.file_name() is None:
-            self.view.run_command('prompt_save_as')
+    def save(self, view):
+        if view.file_name() is None:
+            view.run_command('prompt_save_as')
         else:
-            self.view.run_command('save')
-            
-        sublime.status_message('Trimmer: Remove trailing whitespace and save.')
+            view.run_command('save')
+        sublime.status_message('Trimmer: Removed trailing whitespace and saved.')
