@@ -34,13 +34,11 @@ Usage
 
 Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.
 
-#### Keymap
-
-There is currently only one default keymap defined by *Trimmer*, and that is for the **Mac**. For **Linux** and **Windows**, you will need to manually add a [Key Binding](http://docs.sublimetext.info/en/latest/customization/key_bindings.html) to the command `trimmer`.
+#### Key Bindings
 
 - **Mac**: `Ctrl + S`
-- **Linux**: `not mapped`
-- **Windows**: `not mapped`
+- **Linux**: `Ctrl + Alt + S`
+- **Windows**: `Ctrl + Alt + S`
 
 #### Sublime Text Command
 
