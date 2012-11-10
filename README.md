@@ -31,27 +31,41 @@ Open the `Command Palette...` --> `Package Control: Install Package` and search 
 Usage
 -----
 
-#### Settings
+*Trimmer's* default behavior is to remove trailing whitespace from the end of each line. See [Optional Settings](#optional-settings) below for additional trimming options.
 
-- `trim_eof`
+### Optional Settings
+
+**Trimmer Settings**
+
+- `Preferences` --> `Package Settings` --> `Trimmer` --> `Settings - Default` | `Settings - User`
+
+#### Trim whitespace from end-of-file
 
 Removes all whitespace characters (including newlines), from the end of the document. The default value is `false`.
 
+```javascript
+"trim_eof": false // default
+```
+
 NOTE: This setting will adhere to the default `ensure_newline_at_eof_on_save` setting, and leave a single end-of-file newline character if specified.
 
-- `save_after_trim`
+#### Save after Trim
 
 Saves the current document/buffer immediately after trimming is performed. The default value is `false`.
 
+```javascript
+"save_after_trim": false // default
+```
+
 ~~Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.~~
 
-#### Key Bindings
+### Key Bindings
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-#### Sublime Text Command
+### Sublime Text Command
 
 - `trimmer`
 
