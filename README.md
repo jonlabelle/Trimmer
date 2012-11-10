@@ -1,10 +1,9 @@
 Trimmer
 =======
 
-A [Sublime Text 2](http://www.sublimetext.com) plugin that removes trailing
-whitespace from lines and saves the document.
+A [Sublime Text 2](http://www.sublimetext.com) plugin that removes trailing whitespace from the end of each line.
 
-Trimmer should be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trim and save is performed. *See the [Usage](#usage) section for more information*.
+Trimmer can also be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trimming is performed. *See the [Usage](#usage) section for more information*.
 
 Installation
 ------------
@@ -32,7 +31,13 @@ Open the `Command Palette...` --> `Package Control: Install Package` and search 
 Usage
 -----
 
-Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.
+#### Settings
+
+- `save_after_trim`
+
+To save the current document/buffer immediately after trimming is performed, set the `save_after_trim` setting to `true`. The default value is `false`.
+
+~~Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.~~
 
 #### Key Bindings
 
@@ -44,7 +49,7 @@ Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailin
 
 - `trimmer`
 
-Description: Remove trailing whitespace from each line and save.
+Description: Removes trailing whitespace from the end of each line.
 
 Author
 ------
