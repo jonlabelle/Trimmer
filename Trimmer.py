@@ -23,7 +23,7 @@ class TrimmerCommand(sublime_plugin.TextCommand):
         if save_after_trim is True:
             sublime.set_timeout(lambda: self.save(view), 10)
         else:
-            sublime.status_message('Trimmer: Trailing whitespace removed.')
+            sublime.status_message('Trimmer: Removed trailing whitespace.')
 
     def trim_eof_whitespace(self, edit, view):
         if view.size() > 0:
@@ -40,4 +40,4 @@ class TrimmerCommand(sublime_plugin.TextCommand):
         else:
             view.run_command('save')
 
-        sublime.status_message('Trimmer: Trailing whitespace removed and document saved.')
+        sublime.status_message('Trimmer: Removed trailing whitespace and saved.')
