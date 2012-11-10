@@ -1,9 +1,9 @@
 {
-  // Removes all whitespace characters (including newlines), from the end of
-  // the document. The default value is `false`.
-  "save_after_trim": false,
-
  // Saves the current document/buffer immediately after trimming is performed.
  // The default value is `false`.
-  "trim_eof": false
+  "trim_eof": false,
+
+  // Removes all whitespace characters (including newlines), from the end of
+  // the document. The default value is `false`.
+  "save_after_trim": false
 }
