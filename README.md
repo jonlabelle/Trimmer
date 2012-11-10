@@ -33,9 +33,15 @@ Usage
 
 #### Settings
 
+- `trim_eof`
+
+Removes all whitespace characters (including newlines), from the end of the document. The default value is `false`.
+
+NOTE: This setting will adhere to the default `ensure_newline_at_eof_on_save` setting, and leave a single end-of-file newline character if specified.
+
 - `save_after_trim`
 
-To save the current document/buffer immediately after trimming is performed, set the `save_after_trim` setting to `true`. The default value is `false`.
+Saves the current document/buffer immediately after trimming is performed. The default value is `false`.
 
 ~~Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.~~
 

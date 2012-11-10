@@ -1,3 +1,4 @@
 {
-  "save_after_trim": false
+  "save_after_trim": false,
+  "trim_eof": false
 }
