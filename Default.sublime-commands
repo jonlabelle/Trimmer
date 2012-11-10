@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Trimmer: Remove trailing whitespace and save.",
+        "caption": "Trimmer: Remove trailing whitespace from each line.",
         "command": "trimmer"
     }
 ]
