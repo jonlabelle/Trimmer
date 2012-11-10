@@ -15,10 +15,12 @@ class TrimmerCommand(sublime_plugin.TextCommand):
 
         if save_after_trim is True:
             sublime.set_timeout(lambda: self.save(view), 10)
+        else:
+            sublime.status_message('Trimmer: Trailing whitespace removed.')
 
     def save(self, view):
         if view.file_name() is None:
             view.run_command('prompt_save_as')
         else:
             view.run_command('save')
-        sublime.status_message('Trimmer: Removed trailing whitespace and saved.')
+        sublime.status_message('Trimmer: Trailing whitespace removed and document saved.')
