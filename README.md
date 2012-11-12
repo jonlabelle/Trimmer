@@ -31,7 +31,7 @@ Open the `Command Palette...` --> `Package Control: Install Package` and search 
 Usage
 -----
 
-*Trimmer's* default behavior is to remove trailing whitespace from the end of each line. See [Optional Settings](#optional-settings) below for additional trimming options.
+*Trimmer's* default behavior is to remove trailing whitespace from the end of each line. See [Optional Settings](#optional-settings) for additional trimming capabilities.
 
 ### Optional Settings
 
