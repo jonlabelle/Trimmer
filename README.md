@@ -3,7 +3,9 @@ Trimmer
 
 A [Sublime Text 2](http://www.sublimetext.com) plugin that removes trailing whitespace from the end of each line.
 
-Trimmer can also be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trimming is performed. *See the [Usage](#usage) section for more information*.
+Trimmer can also be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trimming is performed.
+
+See the [Usage](#usage) section for more information and additional features.
 
 Installation
 ------------
