@@ -1,7 +1,7 @@
 Trimmer
 =======
 
-A [Sublime Text 2](http://www.sublimetext.com) plugin that removes trailing whitespace from the end of each line.
+A Sublime Text plugin that removes trailing whitespace from the end of each line. Trimmer is compatible with both Sublime Text 2 and 3.
 
 Trimmer can also be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trimming is performed.
 
@@ -18,17 +18,17 @@ Open the `Command Palette...` --> `Package Control: Install Package` and search 
 
 ##### Install using Git
 
-1. Locate your Sublime Text 2 `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
+1. Locate your Sublime Text `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
 2. Run the following command from your `Packages` directory:
   - `git clone https://github.com/jonlabelle/Trimmer "Trimmer"`
 
 ##### Manually install
 
 1. [Download](https://github.com/jonlabelle/Trimmer/zipball/master) the the zip.
-2. Copy the *Trimmer* folder to your Sublime Text 2 *Packages* directory.
-  - **Mac**: `~/Library/Application Support/Sublime Text 2/Packages`
-  - **Linux**: `~/.Sublime Text 2/Packages`
-  - **Windows**: `%APPDATA%/Sublime Text 2/Packages`
+2. Copy the *Trimmer* folder to your Sublime Text *Packages* directory.
+  - **Mac**: `~/Library/Application Support/Sublime Text [2,3]/Packages`
+  - **Linux**: `~/.Sublime Text [2,3]/Packages`
+  - **Windows**: `%APPDATA%/Sublime Text [2,3]/Packages`
 
 Usage
 -----
