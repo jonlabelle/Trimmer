@@ -1,79 +1,85 @@
 Trimmer
 =======
 
-A Sublime Text plugin that removes trailing whitespace from the end of each line. Trimmer is compatible with both Sublime Text 2 and 3.
+Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for deleting whitespace.
 
-Trimmer can also be used as alternative to the built-in setting, `trim_trailing_white_space_on_save`, for explicitly controlling when trimming is performed.
-
-See the [Usage](#usage) section for more information and additional features.
+- Remove **trailing** whitespace
+- Remove **leading** whitespace
+- Remove **leading** and **trailing** whitespace
+- Remove **end-of-file** whitespace
 
 Installation
 ------------
 
-As always, the recommended method for installation is via [Sublime Package Control](http://wbond.net/sublime_packages/package_control).
+Trimmer is compatible with both Sublime Text 2 and Sublime Text 3.
 
-Open the `Command Palette...` --> `Package Control: Install Package` and search for `Trimmer`.
+### Using Sublime Package Control
 
-#### Alternative installation methods
+If you're using [Sublime Package Control](http://wbond.net/sublime_packages/package_control)...
 
-##### Install using Git
+- From `Tools` -> `Command Palette...` -> `Package Control: Install Package`, enter search term ***Trimmer***.
 
-1. Locate your Sublime Text `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
-2. Run the following command from your `Packages` directory:
-  - `git clone https://github.com/jonlabelle/Trimmer "Trimmer"`
+### Using Git
 
-##### Manually install
+```sh
+# OSX
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
+    git clone https://github.com/jonlabelle/Trimmer
+```
 
-1. [Download](https://github.com/jonlabelle/Trimmer/zipball/master) the the zip.
-2. Copy the *Trimmer* folder to your Sublime Text *Packages* directory.
-  - **Mac**: `~/Library/Application Support/Sublime Text [2,3]/Packages`
-  - **Linux**: `~/.Sublime Text [2,3]/Packages`
-  - **Windows**: `%APPDATA%/Sublime Text [2,3]/Packages`
+### Manual Install
+
+[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your Packages directory.
+
+```sh
+# OSX
+~/Library/Application Support/Sublime Text 2|3/Packages`
+
+# Linux
+~/.Sublime Text 2|3/Packages
+
+# Windows
+%APPDATA%/Sublime Text 2|3/Packages
+```
+
+> **NOTE:** be sure to replace `2|3` with the appropriate version of your install.
 
 Usage
 -----
 
-*Trimmer's* default behavior is to remove trailing whitespace from the end of each line. See [Optional Settings](#optional-settings) for additional trimming capabilities.
+### Default Key Binding
 
-### Optional Settings
-
-**Trimmer Settings**
-
-- `Preferences` --> `Package Settings` --> `Trimmer` --> `Settings - Default` | `Settings - User`
-
-#### Trim whitespace from end-of-file
-
-Removes all whitespace characters (including newlines), from the end of the document. The default value is `false`.
-
-```javascript
-"trim_eof": false // default
-```
-
-NOTE: This setting will adhere to the default `ensure_newline_at_eof_on_save` setting, and leave a single end-of-file newline character if specified.
-
-#### Save after Trim
-
-Saves the current document/buffer immediately after trimming is performed. The default value is `false`.
-
-```javascript
-"save_after_trim": false // default
-```
-
-~~Ensure you're not overriding the *Default* Sublime Text 2 setting, `trim_trailing_white_space_on_save` (which is set to `false`) in your *User* settings. Otherwise, you're just duplicating it's behavior.~~
-
-### Key Bindings
+The default key binding will only remove ***trailing whitespace***.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-### Sublime Text Command
+Additional trimming commands can be accessed from...
 
-- `trimmer`
+- `Command Palette...`, prefix `Trimmer: ...`
+- or `Edit` -> `Line` -> `Remove ... whitespace`
 
-Description: Removes trailing whitespace from the end of each line.
+### Sublime Text Command Names
+
+`trimmer`
+
+:   remove **trailing** whitespace
+
+`trim_leading`
+
+:   remove **leading** whitespace
+
+`trim_leading_trailing`
+
+:   remove **leading** and **trailing** whitespace
+
+`trim_eof`
+
+:   remove **end-of-file** whitespace
+
 
 Author
 ------
 
-[Jon LaBelle](http://jonlabelle.com)
+- [Jon LaBelle](http://jonlabelle.com/)
