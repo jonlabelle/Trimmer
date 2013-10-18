@@ -40,7 +40,7 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 ```sh
 # OSX path
-~/Library/Application Support/Sublime Text 2|3/Packages`
+~/Library/Application Support/Sublime Text 2|3/Packages
 
 # Linux path
 ~/.Sublime Text 2|3/Packages
