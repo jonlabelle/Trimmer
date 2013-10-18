@@ -1,7 +1,7 @@
 Trimmer
 =======
 
-Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for deleting whitespace.
+Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
 - Remove **trailing** whitespace
 - Remove **leading** whitespace
