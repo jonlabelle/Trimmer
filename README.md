@@ -8,18 +8,25 @@ Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for deleting whi
 - Remove **leading** and **trailing** whitespace
 - Remove **end-of-file** whitespace
 
-Installation
-------------
+  
+Compatibility
+-------------
 
 Trimmer is compatible with both Sublime Text 2 and Sublime Text 3.
 
-### Using Sublime Package Control
+
+Installing
+----------
+
+### Package Install
 
 If you're using [Sublime Package Control](http://wbond.net/sublime_packages/package_control)...
 
 - From `Tools` -> `Command Palette...` -> `Package Control: Install Package`, enter search term ***Trimmer***.
 
-### Using Git
+### Git Install
+
+`cd` to your **Packages** directory, and clone the git repository.
 
 ```sh
 # OSX
@@ -29,20 +36,21 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 ### Manual Install
 
-[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your Packages directory.
+[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your **Packages** directory.
 
 ```sh
-# OSX
+# OSX path
 ~/Library/Application Support/Sublime Text 2|3/Packages`
 
-# Linux
+# Linux path
 ~/.Sublime Text 2|3/Packages
 
-# Windows
+# Windows path
 %APPDATA%/Sublime Text 2|3/Packages
 ```
 
 > **NOTE:** be sure to replace `2|3` with the appropriate version of your install.
+
 
 Usage
 -----
@@ -60,23 +68,12 @@ Additional trimming commands can be accessed from...
 - `Command Palette...`, prefix `Trimmer: ...`
 - or `Edit` -> `Line` -> `Remove ... whitespace`
 
-### Sublime Text Command Names
+#### Sublime Text Command Names
 
-`trimmer`
-
-:   remove **trailing** whitespace
-
-`trim_leading`
-
-:   remove **leading** whitespace
-
-`trim_leading_trailing`
-
-:   remove **leading** and **trailing** whitespace
-
-`trim_eof`
-
-:   remove **end-of-file** whitespace
+- `trimmer`: remove **trailing** whitespace
+- `trim_leading`: remove **leading** whitespace
+- `trim_leading_trailing`: remove **leading** and **trailing** whitespace
+- `trim_eof`: remove **end-of-file** whitespace
 
 
 Author
