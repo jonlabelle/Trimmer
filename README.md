@@ -74,14 +74,14 @@ All commands can be run directly from the **Command Palette** or by navigating t
 
 ### Sublime Text Command Names
 
-|    command    |                  description                   |
-| ------------- | ---------------------------------------------- |
-| `trimmer`     | remove **trailing** whitespace                 |
-| `trim_left`   | remove **leading** whitespace                  |
-| `trim_both`   | remove **leading** and **trailing** whitespace |
-| `trim_top`    | remove whitespace at the **top** of the file   |
-| `trim_bottom` | remove whitespace at the **end** of the file   |
-| `trim_empty`  | remove **empty** lines                         |
+|    command    |                  description                   |        context         |
+| ------------- | ---------------------------------------------- | ---------------------- |
+| `trimmer`     | remove **trailing** whitespace                 | file/buffer            |
+| `trim_left`   | remove **leading** whitespace                  | file/buffer, selection |
+| `trim_both`   | remove **leading** and **trailing** whitespace | file/buffer            |
+| `trim_top`    | remove whitespace at the **top** of the file   | file/buffer            |
+| `trim_bottom` | remove whitespace at the **end** of the file   | file/buffer, selection |
+| `trim_empty`  | remove **empty** lines                         | file/buffer, selection |
 
 
 Author
