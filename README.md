@@ -67,7 +67,7 @@ The *default* key binding will remove **trailing whitespace** from each line.
 
 ### Running Commands
 
-All commands can be accessed from the **Command Palette**, or using the **Main menu**.
+All commands can be accessed from the **Command Palette**, or using the **Main Menu**.
 
 - **Command Palette**: prefix, `Trimmer: ...`
 - **Main Menu**: `Edit` -> `Line` -> `Remove ... whitespace`
