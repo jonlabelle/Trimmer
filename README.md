@@ -80,7 +80,7 @@ All commands can be run directly from the **Command Palette** or by navigating t
 | `trim_left`   | remove **leading** whitespace                  | file/buffer, selection |
 | `trim_both`   | remove **leading** and **trailing** whitespace | file/buffer            |
 | `trim_top`    | remove whitespace at the **top** of the file   | file/buffer            |
-| `trim_bottom` | remove whitespace at the **end** of the file   | file/buffer, selection |
+| `trim_bottom` | remove whitespace at the **end** of the file   | file/buffer            |
 | `trim_empty`  | remove **empty** lines                         | file/buffer, selection |
 
 
