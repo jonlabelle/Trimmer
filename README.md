@@ -70,10 +70,10 @@ Additional trimming commands can be accessed from...
 
 #### Sublime Text Command Names
 
-- `trimmer`: remove **trailing** whitespace
-- `trim_leading`: remove **leading** whitespace
-- `trim_leading_trailing`: remove **leading** and **trailing** whitespace
-- `trim_eof`: remove **end-of-file** whitespace
+- `trimmer` remove **trailing** whitespace
+- `trim_leading` remove **leading** whitespace
+- `trim_leading_trailing` remove **leading** and **trailing** whitespace
+- `trim_eof` remove **end-of-file** whitespace
 
 
 Author
