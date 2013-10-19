@@ -20,7 +20,7 @@ Trimmer is compatible with both Sublime Text 2 and Sublime Text 3.
 Installing
 ----------
 
-### Package Install
+### Sublime Package Control Install
 
 If you're using [Sublime Package Control](http://wbond.net/sublime_packages/package_control)...
 
@@ -28,10 +28,10 @@ If you're using [Sublime Package Control](http://wbond.net/sublime_packages/pack
 
 ### Git Install
 
-Change to your **Packages** directory, and clone the git repository.
+Change to your **Packages** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
 ```sh
-# OSX git install
+# Sublime Text 3 OSX git install
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
     git clone https://github.com/jonlabelle/Trimmer
 ```
