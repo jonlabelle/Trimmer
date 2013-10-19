@@ -14,7 +14,7 @@ Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up 
 Compatibility
 -------------
 
-Trimmer is compatible with both Sublime Text 2 and Sublime Text 3.
+Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, and all OS platforms.
 
 
 Installing
