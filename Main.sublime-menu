@@ -14,27 +14,32 @@
 					},
 					{
 						"command": "trimmer",
-						"id": "trimmer-remove-trailing-whitespace",
+						"id": "trimmer-trailing-whitespace",
 						"caption": "Remove Trailing Whitespace"
 					},
 					{
-						"command": "trim_leading",
-						"id": "trimmer-remove-leading-whitespace",
+						"command": "trim_left",
+						"id": "trimmer-left",
 						"caption": "Remove Leading Whitespace"
 					},
 					{
-						"command": "trim_leading_trailing",
-						"id": "trimmer-remove-leading-trailing-whitespace",
+						"command": "trim_both",
+						"id": "trimmer-both",
 						"caption": "Remove Leading and Trailing Whitespace"
 					},
 					{
-						"command": "trim_eof",
-						"id": "trimmer-remove-eof-whitespace",
-						"caption": "Remove End-of-File Whitespace"
+						"command": "trim_bottom",
+						"id": "trimmer-bottom",
+						"caption": "Remove Bottom Whitespace"
 					},
 					{
-						"command": "trim_empty_lines",
-						"id": "trimmer-remove-empty-lines",
+						"command": "trim_top",
+						"id": "trimmer-top",
+						"caption": "Remove Top Whitespace"
+					},
+					{
+						"command": "trim_empty",
+						"id": "trimmer-empty",
 						"caption": "Remove Empty Lines"
 					}
 				]

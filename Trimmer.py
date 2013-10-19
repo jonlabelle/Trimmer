@@ -3,9 +3,9 @@ import sublime_plugin
 import re
 
 
-class TrimLeadingTrailingCommand(sublime_plugin.TextCommand):
+class TrimBothCommand(sublime_plugin.TextCommand):
 
-    """Trim leading and trailing whitespace."""
+    """Remove leading and trailing whitespace."""
 
     def run(self, edit):
         view = self.view
@@ -20,9 +20,9 @@ class TrimLeadingTrailingCommand(sublime_plugin.TextCommand):
             'Trimmer: leading and trailing whitespace removed.')
 
 
-class TrimEofCommand(sublime_plugin.TextCommand):
+class TrimBottomCommand(sublime_plugin.TextCommand):
 
-    """Trim end-of-file whitespace."""
+    """Remove whitespace from the end of the file."""
 
     def run(self, edit):
         view = self.view
@@ -36,10 +36,25 @@ class TrimEofCommand(sublime_plugin.TextCommand):
                 r"(?m)[\s]*$(?![\w\W])", eofc, view.substr(region))
             view.replace(edit, region, edited_text)
 
-        sublime.status_message('Trimmer: end-of-file whitespace removed.')
+        sublime.status_message('Trimmer: bottom whitespace removed.')
 
 
-class TrimEmptyLinesCommand(sublime_plugin.TextCommand):
+class TrimTopCommand(sublime_plugin.TextCommand):
+
+    """Remove whitespace from the top of the file."""
+
+    def run(self, edit):
+        view = self.view
+
+        if view.size() > 0:
+            region = sublime.Region(0, view.size())
+            edited_text = re.sub(r"\A\s+", "", view.substr(region))
+            view.replace(edit, region, edited_text)
+
+        sublime.status_message('Trimmer: top whitespace removed.')
+
+
+class TrimEmptyCommand(sublime_plugin.TextCommand):
 
     """Remove empty lines."""
 
@@ -71,9 +86,9 @@ class TrimEmptyLinesCommand(sublime_plugin.TextCommand):
         return selections
 
 
-class TrimLeadingCommand(sublime_plugin.TextCommand):
+class TrimLeftCommand(sublime_plugin.TextCommand):
 
-    """Trim leading whitespace."""
+    """Remove leading whitespace."""
 
     def run(self, edit):
         reobj = re.compile("^[ \t]+", re.MULTILINE)
@@ -105,7 +120,7 @@ class TrimLeadingCommand(sublime_plugin.TextCommand):
 
 class TrimmerCommand(sublime_plugin.TextCommand):
 
-    """Trim trailing whitespace."""
+    """Remove trailing whitespace."""
 
     def run(self, edit):
         view = self.view

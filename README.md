@@ -3,13 +3,14 @@ Trimmer
 
 Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
-- Remove **trailing** whitespace
-- Remove **leading** whitespace
-- Remove **leading** and **trailing** whitespace
-- Remove **end-of-file** whitespace
-- Remove **empty** lines
+- Remove **trailing** whitespace.
+- Remove **leading** whitespace.
+- Remove **leading** and **trailing** whitespace.
+- Remove whitespace at the **top** of the file.
+- Remove whitespace at the **end** of the file.
+- Remove **empty** lines.
 
-  
+
 Compatibility
 -------------
 
@@ -72,10 +73,11 @@ Additional trimming commands can be accessed from...
 #### Sublime Text Command Names
 
 - `trimmer` remove **trailing** whitespace
-- `trim_leading` remove **leading** whitespace
-- `trim_leading_trailing` remove **leading** and **trailing** whitespace
-- `trim_eof` remove **end-of-file** whitespace
-- `trim_empty_lines` remove **empty** lines
+- `trim_left` remove **leading** whitespace
+- `trim_both` remove **leading** and **trailing** whitespace
+- `trim_top` remove whitespace at the **top** of the file
+- `trim_bottom` remove whitespace at the **end** of the file
+- `trim_empty` remove **empty** lines
 
 
 Author
