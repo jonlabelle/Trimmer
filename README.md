@@ -28,7 +28,7 @@ If you're using [Sublime Package Control](http://wbond.net/sublime_packages/pack
 
 ### Git Install
 
-Change to your **Packages** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
+Change to your Sublime Text ***Packages*** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
 ```sh
 # Sublime Text 3 OSX git install
