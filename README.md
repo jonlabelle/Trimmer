@@ -59,25 +59,29 @@ Usage
 
 ### Default Key Binding
 
-The default key binding will only remove ***trailing whitespace***.
+The default key binding will remove **trailing** whitespace from each line.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-Additional trimming commands can be accessed from...
+### Running Commands
 
-- `Command Palette...`, prefix `Trimmer: ...`
-- or `Edit` -> `Line` -> `Remove ... whitespace`
+- **Command Palette Prefix** 
+    - `Trimmer: ...`
+- **Application Menu** 
+    - `Edit` -> `Line` -> `Remove ... whitespace`
 
-#### Sublime Text Command Names
+### Sublime Text Command Names
 
-- `trimmer` remove **trailing** whitespace
-- `trim_left` remove **leading** whitespace
-- `trim_both` remove **leading** and **trailing** whitespace
-- `trim_top` remove whitespace at the **top** of the file
-- `trim_bottom` remove whitespace at the **end** of the file
-- `trim_empty` remove **empty** lines
+|    command    |                  description                   |
+| ------------- | ---------------------------------------------- |
+| `trimmer`     | remove **trailing** whitespace                 |
+| `trim_left`   | remove **leading** whitespace                  |
+| `trim_both`   | remove **leading** and **trailing** whitespace |
+| `trim_top`    | remove whitespace at the **top** of the file   |
+| `trim_bottom` | remove whitespace at the **end** of the file   |
+| `trim_empty`  | remove **empty** lines                         |
 
 
 Author
