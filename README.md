@@ -59,7 +59,7 @@ Usage
 
 ### Default Key Binding
 
-The default key binding will remove ***trailing whitespace*** from each line.
+The *default* key binding will remove **trailing whitespace** from each line.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
