@@ -31,7 +31,7 @@ If you're using [Sublime Package Control](http://wbond.net/sublime_packages/pack
 Change to your **Packages** directory, and clone the git repository.
 
 ```sh
-# OSX
+# OSX git install
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
     git clone https://github.com/jonlabelle/Trimmer
 ```
