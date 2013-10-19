@@ -22,7 +22,7 @@ Installing
 
 ### Sublime Package Control Install
 
-If you're using [Sublime Package Control](http://wbond.net/sublime_packages/package_control)...
+If you have [Sublime Package Control](http://wbond.net/sublime_packages/package_control) installed, simply navigate to:
 
 - `Tools` -> `Command Palette...` -> `Package Control: Install Package`, and type **`Trimmer`**.
 
