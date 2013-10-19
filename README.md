@@ -20,7 +20,7 @@ Trimmer is compatible with both Sublime Text 2 and Sublime Text 3.
 Installing
 ----------
 
-### Sublime Package Control Install
+### Sublime Package Control
 
 If you have [Sublime Package Control](http://wbond.net/sublime_packages/package_control) installed, simply navigate to:
 
