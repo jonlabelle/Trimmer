@@ -38,7 +38,7 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 ### Manual Install
 
-[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your **Packages** directory.
+[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory.
 
 ```sh
 # OSX Sublime Text Pacakges Path
