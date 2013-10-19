@@ -67,10 +67,10 @@ The *default* key binding will remove **trailing whitespace** from each line.
 
 ### Running Commands
 
-All commands can be accessed from the **Command Palette**, or by navigating the application **Menu**.
+All commands can be accessed from the **Command Palette**, or using the **Main menu**.
 
 - **Command Palette**: prefix, `Trimmer: ...`
-- **Menu**: `Edit` -> `Line` -> `Remove ... whitespace`
+- **Main Menu**: `Edit` -> `Line` -> `Remove ... whitespace`
 
 ### Sublime Text Commands
 
