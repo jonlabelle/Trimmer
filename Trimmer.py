@@ -44,16 +44,31 @@ class TrimEmptyLinesCommand(sublime_plugin.TextCommand):
     """Remove empty lines."""
 
     def run(self, edit):
-        view = self.view
+        reobj = re.compile("^[ \t]*$\r?\n", re.MULTILINE)
 
-        if view.size() > 0:
-            reobj = re.compile("^[ \t]*$\r?\n", re.MULTILINE)
-            region = sublime.Region(0, view.size())
+        selections = self.get_selections()
 
-            edited_text = reobj.sub("", view.substr(region))
-            view.replace(edit, region, edited_text)
+        for sel in selections:
+            edited_text = reobj.sub("", self.view.substr(sel))
+            self.view.replace(edit, sel, edited_text)
 
         sublime.status_message('Trimmer: empty lines removed.')
+
+    def get_selections(self):
+        selections = self.view.sel()
+
+        # check for selections
+        has_selections = False
+        for region in selections:
+            if region.empty() is False:
+                has_selections = True
+
+        # if no selections, use the file as selection
+        if not has_selections:
+            full_region = sublime.Region(0, self.view.size())
+            selections.add(full_region)
+
+        return selections
 
 
 class TrimLeadingCommand(sublime_plugin.TextCommand):
@@ -61,15 +76,31 @@ class TrimLeadingCommand(sublime_plugin.TextCommand):
     """Trim leading whitespace."""
 
     def run(self, edit):
-        view = self.view
+        reobj = re.compile("^[ \t]+", re.MULTILINE)
 
-        trim = view.find_all("^[ \t]+")
-        trim.reverse()
+        selections = self.get_selections()
 
-        for r in trim:
-            view.erase(edit, r)
+        for sel in selections:
+            edited_text = reobj.sub("", self.view.substr(sel))
+            self.view.replace(edit, sel, edited_text)
 
         sublime.status_message('Trimmer: leading whitespace removed.')
+
+    def get_selections(self):
+        selections = self.view.sel()
+
+        # check for selections
+        has_selections = False
+        for region in selections:
+            if region.empty() is False:
+                has_selections = True
+
+        # if no selections, use the file as selection
+        if not has_selections:
+            full_region = sublime.Region(0, self.view.size())
+            selections.add(full_region)
+
+        return selections
 
 
 class TrimmerCommand(sublime_plugin.TextCommand):
