@@ -72,7 +72,7 @@ All commands can be run directly from the **Command Palette** or by navigating t
 - **Command Palette**: prefix, `Trimmer: ...`
 - **Application Menu**: `Edit` -> `Line` -> `Remove ... whitespace`
 
-### Sublime Text Command Names
+### Sublime Text Commands
 
 |    command    |                  description                   |        context         |
 | ------------- | ---------------------------------------------- | ---------------------- |
