@@ -24,11 +24,11 @@ Installing
 
 If you're using [Sublime Package Control](http://wbond.net/sublime_packages/package_control)...
 
-- From `Tools` -> `Command Palette...` -> `Package Control: Install Package`, enter search term ***Trimmer***.
+- `Tools` -> `Command Palette...` -> `Package Control: Install Package`, and type **`Trimmer`**.
 
 ### Git Install
 
-`cd` to your **Packages** directory, and clone the git repository.
+Change to your **Packages** directory, and clone the git repository.
 
 ```sh
 # OSX
