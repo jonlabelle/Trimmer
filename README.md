@@ -41,17 +41,17 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 [Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your **Packages** directory.
 
 ```sh
-# OSX path
-~/Library/Application Support/Sublime Text 2|3/Packages
+# OSX Sublime Text Pacakges Path
+~/Library/Application Support/Sublime Text [2|3]/Packages
 
-# Linux path
-~/.Sublime Text 2|3/Packages
+# Linux Sublime Text Pacakges Path
+~/.Sublime Text [2|3]/Packages
 
-# Windows path
-%APPDATA%/Sublime Text 2|3/Packages
+# Windows Sublime Text Pacakges Path
+%APPDATA%/Sublime Text [2|3]/Packages
 ```
 
-> **NOTE:** be sure to replace `2|3` with the appropriate version of your install.
+> **NOTE:** replace the `[2|3]` part above with the appropriate major version of your install.
 
 
 Usage
