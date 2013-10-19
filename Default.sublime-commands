@@ -14,5 +14,9 @@
 	{
 		"caption": "Trimmer: Remove end-of-file whitespace.",
 		"command": "trim_eof"
+	},
+	{
+		"caption": "Trimmer: Remove empty lines.",
+		"command": "trim_empty_lines"
 	}
 ]

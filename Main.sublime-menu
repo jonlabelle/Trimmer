@@ -31,6 +31,11 @@
 						"command": "trim_eof",
 						"id": "trimmer-remove-eof-whitespace",
 						"caption": "Remove End-of-File Whitespace"
+					},
+					{
+						"command": "trim_empty_lines",
+						"id": "trimmer-remove-empty-lines",
+						"caption": "Remove Empty Lines"
 					}
 				]
 			}

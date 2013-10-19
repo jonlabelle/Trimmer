@@ -7,6 +7,7 @@ Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up 
 - Remove **leading** whitespace
 - Remove **leading** and **trailing** whitespace
 - Remove **end-of-file** whitespace
+- Remove **empty** lines
 
   
 Compatibility
@@ -74,6 +75,7 @@ Additional trimming commands can be accessed from...
 - `trim_leading` remove **leading** whitespace
 - `trim_leading_trailing` remove **leading** and **trailing** whitespace
 - `trim_eof` remove **end-of-file** whitespace
+- `trim_empty_lines` remove **empty** lines
 
 
 Author

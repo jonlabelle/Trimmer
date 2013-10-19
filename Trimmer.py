@@ -39,6 +39,23 @@ class TrimEofCommand(sublime_plugin.TextCommand):
         sublime.status_message('Trimmer: end-of-file whitespace removed.')
 
 
+class TrimEmptyLinesCommand(sublime_plugin.TextCommand):
+
+    """Remove empty lines."""
+
+    def run(self, edit):
+        view = self.view
+
+        if view.size() > 0:
+            reobj = re.compile("^[ \t]*$\r?\n", re.MULTILINE)
+            region = sublime.Region(0, view.size())
+
+            edited_text = reobj.sub("", view.substr(region))
+            view.replace(edit, region, edited_text)
+
+        sublime.status_message('Trimmer: empty lines removed.')
+
+
 class TrimLeadingCommand(sublime_plugin.TextCommand):
 
     """Trim leading whitespace."""
