@@ -1,18 +1,18 @@
 [
-    {
-        "caption": "Trimmer: Remove trailing whitespace.",
-        "command": "trimmer"
-    },
-    {
-        "caption": "Trimmer: Remove leading whitespace.",
-        "command": "trim_leading"
-    },
-    {
-        "caption": "Trimmer: Remove leading and trailing whitespace.",
-        "command": "trim_leading_trailing"
-    },
-    {
-        "caption": "Trimmer: Remove end-of-file whitespace.",
-        "command": "trim_eof"
-    }
+	{
+		"caption": "Trimmer: Remove trailing whitespace.",
+		"command": "trimmer"
+	},
+	{
+		"caption": "Trimmer: Remove leading whitespace.",
+		"command": "trim_leading"
+	},
+	{
+		"caption": "Trimmer: Remove leading and trailing whitespace.",
+		"command": "trim_leading_trailing"
+	},
+	{
+		"caption": "Trimmer: Remove end-of-file whitespace.",
+		"command": "trim_eof"
+	}
 ]
