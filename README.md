@@ -3,13 +3,9 @@ Trimmer
 
 Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
-- Remove **trailing** whitespace.
-- Remove **leading** whitespace.
-- Remove **leading** and **trailing** whitespace.
-- Remove whitespace at the **top** of the file.
-- Remove whitespace at the **end** of the file.
-- Remove **empty** lines.
-
+- Trim whitespace at the end of each line.
+- Trim whitespace at the start of each line.
+- Delete empty, whitespace only lines.
 
 Compatibility
 -------------
@@ -59,7 +55,7 @@ Usage
 
 ### Default Key Binding
 
-The *default* key binding will remove **trailing whitespace** from each line.
+The *default* key binding will trim trailing whitespace from the end of each of line, in current view.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
@@ -67,21 +63,15 @@ The *default* key binding will remove **trailing whitespace** from each line.
 
 ### Running Commands
 
-All commands can be accessed from the **Command Palette**, or using the **Main Menu**.
-
-- **Command Palette**: prefix, `Trimmer: ...`
-- **Main Menu**: `Edit` -> `Line` -> `Remove ... whitespace`
+All commands are accessible from the **Command Palette**, prefix `Trimmer`.
 
 ### Sublime Text Commands
 
-|    command    |                  description                   |        context         |
-| ------------- | ---------------------------------------------- | ---------------------- |
-| `trimmer`     | remove **trailing** whitespace                 | file/buffer            |
-| `trim_left`   | remove **leading** whitespace                  | file/buffer, selection |
-| `trim_both`   | remove **leading** and **trailing** whitespace | file/buffer            |
-| `trim_top`    | remove whitespace at the **top** of the file   | file/buffer            |
-| `trim_bottom` | remove whitespace at the **end** of the file   | file/buffer            |
-| `trim_empty`  | remove **empty** lines                         | file/buffer, selection |
+|          command          |                description                |             scope              |
+| ------------------------- | ----------------------------------------- | ------------------------------ |
+| `trimmer`                 | trim whitespace at the end of each line   | entire file                    |
+| `trim_leading_whitespace` | trim whitespace at the start of each line | line selection, or entire file |
+| `delete_empty_lines`      | deletes empty, whitespace only lines      | line selection, or entire file |
 
 
 Author

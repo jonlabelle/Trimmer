@@ -1,26 +1,14 @@
 [
 	{
-		"caption": "Trimmer: Remove trailing whitespace.",
+		"caption": "Trimmer: Trim whitespace at the end of each line.",
 		"command": "trimmer"
 	},
 	{
-		"caption": "Trimmer: Remove leading whitespace.",
-		"command": "trim_left"
+		"caption": "Trimmer: Trim whitespace at the start of each line.",
+		"command": "trim_leading_whitespace"
 	},
 	{
-		"caption": "Trimmer: Remove leading and trailing whitespace.",
-		"command": "trim_both"
-	},
-	{
-		"caption": "Trimmer: Remove bottom whitespace.",
-		"command": "trim_bottom"
-	},
-	{
-		"caption": "Trimmer: Remove top whitespace.",
-		"command": "trim_top"
-	},
-	{
-		"caption": "Trimmer: Remove empty lines.",
-		"command": "trim_empty"
+		"caption": "Trimmer: Delete whitespace only lines.",
+		"command": "delete_empty_lines"
 	}
 ]
