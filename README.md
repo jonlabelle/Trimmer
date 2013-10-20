@@ -47,7 +47,7 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 %APPDATA%/Sublime Text [2|3]/Packages
 ```
 
-> **NOTE:** replace the `[2|3]` part above with the appropriate *major* version of your install.
+> **NOTE:** replace the `[2|3]` part above with the appropriate Sublime Text *major* version of your install.
 
 
 Usage
