@@ -63,7 +63,7 @@ The *default* key binding will trim trailing whitespace from the end of each of 
 
 ### Running Commands
 
-All commands are accessible from the **Command Palette**, prefix `Trimmer`.
+All commands are accessible from the **Command Palette**, prefix `Trimmer: ...`.
 
 ### Sublime Text Commands
 
