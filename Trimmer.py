@@ -13,19 +13,16 @@ class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message(
-            'Trimmer: empty lines deleted.')
+        sublime.status_message('Trimmer: empty lines deleted.')
 
     def get_selections(self):
         selections = self.view.sel()
 
-        # check for selections
         has_selections = False
         for sel in selections:
             if sel.empty() is False:
                 has_selections = True
 
-        # if no selections, use the file as selection
         if not has_selections:
             full_region = sublime.Region(0, self.view.size())
             selections.add(full_region)
@@ -40,21 +37,19 @@ class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
         selections = self.get_selections()
 
         for sel in selections:
-            edited_text = reobj.sub("", self.view.substr(sel))
-            self.view.replace(edit, sel, edited_text)
+            trimmed = reobj.sub("", self.view.substr(sel))
+            self.view.replace(edit, sel, trimmed)
 
         sublime.status_message('Trimmer: leading whitespace trimmed.')
 
     def get_selections(self):
         selections = self.view.sel()
 
-        # check for selections
         has_selections = False
-        for region in selections:
-            if region.empty() is False:
+        for sel in selections:
+            if sel.empty() is False:
                 has_selections = True
 
-        # if no selections, use the file as selection
         if not has_selections:
             full_region = sublime.Region(0, self.view.size())
             selections.add(full_region)
@@ -64,15 +59,13 @@ class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
 
 class TrimmerCommand(sublime_plugin.TextCommand):
 
-    """Trim whitespace at the end of each line."""
-
     def run(self, edit):
         view = self.view
 
-        trim = view.find_all("[\t ]+$")
-        trim.reverse()
+        matched_regions = view.find_all("[\t ]+$")
+        matched_regions.reverse()
 
-        for r in trim:
+        for r in matched_regions:
             view.erase(edit, r)
 
         sublime.status_message('Trimmer: trailing whitespace removed.')
