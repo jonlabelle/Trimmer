@@ -55,7 +55,7 @@ Usage
 
 ### Default Key Binding
 
-The *default* key binding will trim trailing whitespace from the end of each of line, in current view.
+The *default* key binding will trim trailing whitespace at the end of each of line, in the current file.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
