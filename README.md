@@ -67,11 +67,11 @@ All commands are accessible from the **Command Palette**, prefix `Trimmer: ...`.
 
 ### Sublime Text Commands
 
-|          command          |                description                |             scope              |
+|          command          |                description                |            context             |
 | ------------------------- | ----------------------------------------- | ------------------------------ |
 | `trimmer`                 | trim whitespace at the end of each line   | entire file                    |
 | `trim_leading_whitespace` | trim whitespace at the start of each line | line selection, or entire file |
-| `delete_empty_lines`      | deletes empty, whitespace only lines      | line selection, or entire file |
+| `delete_empty_lines`      | delete empty, whitespace only lines       | line selection, or entire file |
 
 
 Author
