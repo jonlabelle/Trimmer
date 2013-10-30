@@ -70,8 +70,8 @@ All commands are accessible from the **Command Palette**, prefix `Trimmer: ...`.
 |          command          |                description                |            context             |
 | ------------------------- | ----------------------------------------- | ------------------------------ |
 | `trimmer`                 | trim whitespace at the end of each line   | entire file                    |
-| `trim_leading_whitespace` | trim whitespace at the start of each line | line selection, or entire file |
-| `delete_empty_lines`      | delete empty, whitespace only lines       | line selection, or entire file |
+| `trim_leading_whitespace` | trim whitespace at the start of each line | selected lines, or entire file |
+| `delete_empty_lines`      | delete empty, whitespace only lines       | selected lines, or entire file |
 
 
 Author
