@@ -27,6 +27,7 @@ If you have [Sublime Package Control](http://wbond.net/sublime_packages/package_
 Change to your Sublime Text ***Packages*** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
 ```sh
+# on OSX... cd to packages directory and clone the git repositrory
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
     git clone https://github.com/jonlabelle/Trimmer
 ```
@@ -35,14 +36,16 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 [Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory.
 
+**Sublime Text Packages Directory by Platform**
+
 ```sh
-# OSX Sublime Text Pacakges Path
+# OSX
 ~/Library/Application Support/Sublime Text [2|3]/Packages
 
-# Linux Sublime Text Pacakges Path
+# Linux
 ~/.Sublime Text [2|3]/Packages
 
-# Windows Sublime Text Pacakges Path
+# Windows
 %APPDATA%/Sublime Text [2|3]/Packages
 ```
 
