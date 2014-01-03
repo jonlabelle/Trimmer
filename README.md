@@ -1,7 +1,7 @@
 Trimmer
 =======
 
-Trimmer is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
+[Trimmer](http://jonlabelle.github.io/Trimmer/) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
 - Trim whitespace at the end of each line.
 - Trim whitespace at the start of each line.
