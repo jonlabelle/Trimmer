@@ -12,7 +12,6 @@ Compatibility
 
 Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS platforms.
 
-
 Installing
 ----------
 
@@ -65,7 +64,7 @@ The *default* key binding will trim trailing whitespace at the end of each of li
 
 All commands are accessible from the **Command Palette** and prefixed with `Trimmer:`.
 
-### Sublime Text Commands
+### Trimmer Sublime Text Command Reference
 
 |          command          |                description                |            context             |
 | ------------------------- | ----------------------------------------- | ------------------------------ |
