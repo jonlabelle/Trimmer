@@ -7,13 +7,11 @@ Trimmer
 - Trim whitespace at the start of each line.
 - Delete empty, whitespace only lines.
 
-Compatibility
--------------
+## Compatibility
 
 Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS platforms (OS X, Windows and Linux).
 
-Installing
-----------
+## Installing
 
 ### Package Control
 
@@ -21,22 +19,24 @@ If you have [Package Control](https://sublime.wbond.net) installed, simply navig
 
 - `Tools` -> `Command Palette...` -> `Package Control: Install Package`, and type **`Trimmer`**.
 
-### Git Install
+### Git
 
-Change to your Sublime Text ***Packages*** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
+To install Trimmer using Git, change to your Sublime Text ***Packages*** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
 ```sh
-# on OSX... cd to packages directory and clone the git repositrory
+# on OS X... cd to your Packages directory and clone the Git repository
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
     git clone https://github.com/jonlabelle/Trimmer
 ```
 
-### Manual Install
+### Manually
 
-[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory. Listed below are the default Sublime Text ***Packages*** directories by platform.
+You can also manually install Trimmer.
+
+Download and extract the [zip file](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory. Listed below are the default Sublime Text ***Packages*** directories by platform.
 
 ```sh
-# OSX
+# OS X
 ~/Library/Application Support/Sublime Text [2|3]/Packages
 
 # Linux
@@ -48,11 +48,9 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 > **NOTE:** replace the `[2|3]` part above with the appropriate Sublime Text *major* version of your install.
 
+## Usage
 
-Usage
------
-
-### Default Key Binding
+### Key Bindings
 
 The *default* key binding will trim trailing whitespace at the end of each of line, in the current file.
 
@@ -60,7 +58,7 @@ The *default* key binding will trim trailing whitespace at the end of each of li
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-### Running Commands
+### Commands
 
 All commands are accessible from the **Command Palette** and prefixed with `Trimmer:`.
 
@@ -73,7 +71,6 @@ All commands are accessible from the **Command Palette** and prefixed with `Trim
 | `delete_empty_lines`      | delete empty, whitespace only lines       | selected lines, or entire file |
 
 
-Author
-------
+## Author
 
 - [Jon LaBelle](http://jonlabelle.com/)
