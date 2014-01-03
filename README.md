@@ -10,7 +10,7 @@ Trimmer
 Compatibility
 -------------
 
-Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS platforms.
+Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS platforms (OS X, Windows and Linux).
 
 Installing
 ----------
