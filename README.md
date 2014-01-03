@@ -17,7 +17,10 @@ Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS pla
 
 If you have [Package Control](https://sublime.wbond.net) installed, simply navigate to:
 
-- `Tools` -> `Command Palette...` -> `Package Control: Install Package`, and type **`Trimmer`**.
+- **Tools**
+    - **Command Palette...**
+    - **Package Control:** ***Install Package***
+        - enter the word `Trimmer`
 
 ### Git
 
