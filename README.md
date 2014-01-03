@@ -34,9 +34,7 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
 
 ### Manual Install
 
-[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory.
-
-**Sublime Text Package Directories by Platform**
+[Download](https://github.com/jonlabelle/Trimmer/zipball/master) and extract the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory. Listed below are the default Sublime Text ***Packages*** directories by platform.
 
 ```sh
 # OSX
@@ -65,7 +63,7 @@ The *default* key binding will trim trailing whitespace at the end of each of li
 
 ### Running Commands
 
-All commands are accessible from the **Command Palette**, prefix `Trimmer: ...`.
+All commands are accessible from the **Command Palette** under the prefix `Trimmer:`.
 
 ### Sublime Text Commands
 
