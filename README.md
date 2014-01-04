@@ -55,7 +55,7 @@ Download and extract the [zip file](https://github.com/jonlabelle/Trimmer/zipbal
 
 ### Key Bindings
 
-The *default* key binding will trim trailing whitespace at the end of each of line, in the current file.
+The *default* key binding will trim trailing whitespace at the end of each of line.
 
 - **Mac**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
