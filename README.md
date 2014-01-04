@@ -20,7 +20,7 @@ If you have [Package Control](https://sublime.wbond.net) installed, simply navig
 - **Tools**
     - **Command Palette...**
     - **Package Control:** ***Install Package***
-        - enter the word `Trimmer`
+        - type the word `Trimmer`
 
 ### Git
 
