@@ -13,7 +13,7 @@ class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message('Trimmer: empty lines deleted.')
+        sublime.status_message("Trimmer: empty lines deleted.")
 
     def get_selections(self):
         selections = self.view.sel()
