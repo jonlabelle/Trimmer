@@ -40,7 +40,7 @@ class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message('Trimmer: leading whitespace removed.')
+        sublime.status_message("Trimmer: leading whitespace removed.")
 
     def get_selections(self):
         selections = self.view.sel()
@@ -68,4 +68,4 @@ class TrimmerCommand(sublime_plugin.TextCommand):
         for r in matched_regions:
             view.erase(edit, r)
 
-        sublime.status_message('Trimmer: trailing whitespace removed.')
+        sublime.status_message("Trimmer: trailing whitespace removed.")
