@@ -76,6 +76,18 @@ All commands are accessible from the **Command Palette** and prefixed with `Trim
 | `delete_empty_lines`               | delete empty, whitespace only lines               | selected lines, or entire file |
 
 
+### Config file
+
+```javascript
+{
+    // Select which command you want to run on file save
+    // "trimmer", "trim_leading_whitespace", 
+    // "trim_leading_trailing_whitespace", "delete_empty_lines", 
+    // or "none" to not run any of these commands when a file is saved.
+    "run_on_save": "none"
+}
+```
+
 ## Author
 
 - [Jon LaBelle](http://jonlabelle.com/)

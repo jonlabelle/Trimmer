@@ -3,6 +3,21 @@ import sublime_plugin
 import re
 
 
+class TrimmerEvents(sublime_plugin.EventListener):
+    '''An EventListener class to utilize Sublime's events.'''
+
+    def on_pre_save(self, view):
+        '''
+        When the file is being saved, check if we're configured to
+        run any of these commands on the file.
+        '''
+
+        run_on_save = sublime.load_settings('Trimmer.sublime-settings').get('run_on_save')
+
+        if run_on_save in ["trimmer", "trim_leading_whitespace", "trim_leading_trailing_whitespace", "delete_empty_lines"]:
+            view.run_command(run_on_save)
+
+
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
