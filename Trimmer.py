@@ -60,7 +60,7 @@ class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
 class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        reobj = re.compile("^[ \\t]+|[\\t ]+$", re.MULTILINE)
+        reobj = re.compile("^[ \t]+|[\t ]+$", re.MULTILINE)
         selections = self.get_selections()
 
         for sel in selections:
