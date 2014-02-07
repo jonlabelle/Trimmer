@@ -37,6 +37,23 @@
 							{
 								"command": "open_file",
 								"args": {
+									"file": "${packages}/Trimmer/Trimmer.sublime-settings"
+								},
+								"caption": "Settings - Default"
+							},
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/User/Trimmer.sublime-settings"
+								},
+								"caption": "Settings - User"
+							},
+							{
+								"caption": "-" 
+							},
+							{
+								"command": "open_file",
+								"args": {
 									"file": "${packages}/Trimmer/Default (Windows).sublime-keymap",
 									"platform": "Windows"
 								},
