@@ -78,7 +78,7 @@ All commands are accessible from the **Command Palette** and prefixed with `Trim
 
 ### Config file
 
-```sh
+```javascript
 {
     // Select which command you want to run on file save
     // "trimmer", "trim_leading_whitespace", 
