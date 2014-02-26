@@ -2,12 +2,14 @@ Trimmer
 =======
 
 [Trimmer](http://jonlabelle.github.io/Trimmer/) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
-
+ 
 - Trim whitespace at the end of each line.
 - Trim whitespace at the start of each line.
 - Trim whitespace at the start and end of each line.
 - Delete empty, whitespace only lines.
-
+ 
+![ScreenShot](https://raw.github.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
+ 
 ## Compatibility
 
 Trimmer is compatible with both Sublime Text 2 and Sublime Text 3, on all OS platforms (OS X, Windows and Linux).
