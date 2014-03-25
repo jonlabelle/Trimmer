@@ -7,6 +7,8 @@ Trimmer
 - Trim whitespace at the start of each line.
 - Trim whitespace at the start and end of each line.
 - Delete empty, whitespace only lines.
+
+Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
  
 ![ScreenShot](https://raw.github.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
  
