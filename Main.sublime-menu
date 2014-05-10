@@ -41,7 +41,7 @@
 						"command": "trim_edges",
 						"id": "trim-edges",
 						"caption": "Trim File Edges"
-					},
+					}
 				]
 			}
 		]
