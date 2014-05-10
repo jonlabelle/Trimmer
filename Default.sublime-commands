@@ -18,5 +18,9 @@
 	{
 		"caption": "Trimmer: Collapse empty lines.",
 		"command": "collapse_empty_lines"
+	},
+	{
+		"caption": "Trimmer: Trim file edges.",
+		"command": "trim_edges"	
 	}
 ]

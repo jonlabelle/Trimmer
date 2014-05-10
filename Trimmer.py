@@ -113,6 +113,20 @@ class CollapseEmptyLines(sublime_plugin.TextCommand):
         return selections
 
 
+class TrimEdges(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        view = self.view
+
+        if view.size() > 0:
+            region = sublime.Region(0, view.size())
+            edited_text = re.sub(
+                r"^\r?\n*|(?m)\r?\n*$(?![\w\W])", "", view.substr(region))
+            view.replace(edit, region, edited_text)
+
+        sublime.status_message('Trimmer: file edges trimmed.')
+
+
 class TrimmerCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):

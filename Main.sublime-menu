@@ -37,6 +37,11 @@
 						"id": "collapse-empty-lines",
 						"caption": "Collapse Empty Lines"
 					},
+					{
+						"command": "trim_edges",
+						"id": "trim-edges",
+						"caption": "Trim File Edges"
+					},
 				]
 			}
 		]
