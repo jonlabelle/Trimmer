@@ -120,9 +120,8 @@ class TrimEdges(sublime_plugin.TextCommand):
 
         if view.size() > 0:
             region = sublime.Region(0, view.size())
-            edited_text = re.sub(
-                r"^\r?\n*|(?m)\r?\n*$(?![\w\W])", "", view.substr(region))
-            view.replace(edit, region, edited_text)
+            trimmed = re.sub("(\\A\\s+|\\s+\\Z)", "", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message('Trimmer: file edges trimmed.')
 
