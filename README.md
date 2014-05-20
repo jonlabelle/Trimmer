@@ -16,17 +16,17 @@ Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh
   
 ## Compatibility
 
-Trimmer is compatible with Sublime Text 2 and 3, on all OS platforms (OS X, Windows and Linux).
+Trimmer is compatible with Sublime Text 2 and 3, on *all* OS platforms (OS X, Windows and Linux).
 
-## Installing
+## Install
 
 ### Package Control
 
-The easiest (and recommended) way to install Trimmer is using [Package Control](https://sublime.wbond.net).
+The easiest, and recommended way to install Trimmer is using [Package Control](https://sublime.wbond.net).
 
-- `Tools` -> `Command Palette...` -> `Package Control: Install Package`  
-  
-  Type the word `Trimmer`, and select it to install.
+From the main application menu, navigate to:
+
+- `Tools` -> `Command Palette...` -> `Package Control: Install Package`, type the word **`Trimmer`**, then select it to complete install.
 
 ### Git
 
@@ -38,20 +38,21 @@ To install Trimmer using Git, change to your Sublime Text ***Packages*** directo
 
 ### Manually
 
-You can also manually install Trimmer.
+**Download** and **extract** the [zip file](https://github.com/jonlabelle/Trimmer/zipball/master) or [tarball](https://github.com/jonlabelle/Trimmer/tarball/master) to your Sublime Text ***Packages*** directory. Listed below are the *default* locations for Sublime Text Packages.
 
-Download and extract the [zip file](https://github.com/jonlabelle/Trimmer/zipball/master) to your ***Packages*** directory. Listed below are the default Sublime Text ***Packages*** directories by platform.
+**OS X**
 
-	# OS X
 	~/Library/Application Support/Sublime Text [2|3]/Packages
 
-	# Linux
+**Linux**
+
 	~/.Sublime Text [2|3]/Packages
 
-	# Windows
+**Windows**
+
 	%APPDATA%/Sublime Text [2|3]/Packages
 
-> **NOTE:** replace the `[2|3]` part above with the appropriate Sublime Text *major* version of your install.
+> Don't forget to replace the `[2|3]` part with the appropriate Sublime Text version for your installation.
 
 ## Usage
 
@@ -63,16 +64,16 @@ The *default* key binding will trim trailing whitespace at the end of each of li
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-## Commands
+## Command Accessibility
 
-All commands are accessible from the **Command Palette** using prefix `Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimming Command*.
+All commands are accessible from the **Command Palette** using prefix `Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
 
-### Command Access Screenshots
+**Screenshots**
 
-- [from the Command Palette](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
-- [from the Main Menu](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
+- from the [Command Palette](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
+- from the [Main Menu](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
 
-### Trimmer Command Reference
+## Trimmer Command API
 
 |              Command               |                              Description                               |            Context             |
 |------------------------------------|------------------------------------------------------------------------|--------------------------------|
