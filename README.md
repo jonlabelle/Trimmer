@@ -86,4 +86,8 @@ All commands are accessible from the **Command Palette** using prefix `Trimmer`,
 
 ## Author
 
-- [Jon LaBelle](http://jonlabelle.com/)
+- [Jon LaBelle](http://jonlabelle.com)
+
+## License
+
+Trimmer is licensed under the [MIT license](http://opensource.org/licenses/MIT).
