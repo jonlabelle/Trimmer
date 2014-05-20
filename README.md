@@ -63,11 +63,16 @@ The *default* key binding will trim trailing whitespace at the end of each of li
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-### Commands
+## Commands
 
-All commands are accessible from the ***Command Palette*** using prefix `Trimmer:`, and in the Main Menu under `Edit` -> `Line`.
+All commands are accessible from the **Command Palette** using prefix `Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimming Command*.
 
-#### Trimmer Sublime Text Command Reference
+### Command Access Screenshots
+
+- [from the Command Palette](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
+- [from the Main Menu](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
+
+### Trimmer Command Reference
 
 |              Command               |                              Description                               |            Context             |
 |------------------------------------|------------------------------------------------------------------------|--------------------------------|
