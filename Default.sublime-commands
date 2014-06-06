@@ -21,6 +21,10 @@
 	},
 	{
 		"caption": "Trimmer: Trim file edges.",
-		"command": "trim_edges"	
+		"command": "trim_edges"
+	},
+	{
+		"caption": "Trimmer: Remove blank spaces.",
+		"command": "remove_blank_spaces"
 	}
 ]

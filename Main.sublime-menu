@@ -41,6 +41,11 @@
 						"command": "trim_edges",
 						"id": "trim-edges",
 						"caption": "Trim File Edges"
+					},
+					{
+						"command": "remove_blank_spaces",
+						"id": "remove-blank-spaces",
+						"caption": "Remove Blank Spaces"
 					}
 				]
 			}

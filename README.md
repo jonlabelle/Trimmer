@@ -9,6 +9,7 @@ Trimmer
 - Delete empty, whitespace only lines.
 - Collapse multiple consecutive empty lines into one empty line.
 - Trim empty, whitespace only lines at the beginning and end of the file.
+- Remove blank space characters.
 
 Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
  
@@ -75,14 +76,15 @@ All commands are accessible from the **Command Palette** using prefix `Trimmer`,
 
 ## Trimmer Command API
 
-|              Command               |                              Description                               |            Context             |
-|------------------------------------|------------------------------------------------------------------------|--------------------------------|
-| `trimmer`                          | trim whitespace at the end of each line                                | entire file                    |
-| `trim_leading_whitespace`          | trim whitespace at the start of each line                              | selected lines, or entire file |
-| `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                      | selected lines, or entire file |
-| `delete_empty_lines`               | delete empty, whitespace only lines                                    | selected lines, or entire file |
-| `collapse_empty_lines`             | collapse multiple consecutive empty lines into one empty line          | selected lines, or entire file |
-| `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file                    |
+|              Command               |                              Description                               |          Context          |
+|------------------------------------|------------------------------------------------------------------------|---------------------------|
+| `trimmer`                          | trim whitespace at the end of each line                                | entire file               |
+| `trim_leading_whitespace`          | trim whitespace at the start of each line                              | selection, or entire file |
+| `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                      | selection, or entire file |
+| `delete_empty_lines`               | delete empty, whitespace only lines                                    | selection, or entire file |
+| `collapse_empty_lines`             | collapse multiple consecutive empty lines into one empty line          | selection, or entire file |
+| `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
+| `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
 
 ## Author
 
