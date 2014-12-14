@@ -94,8 +94,7 @@ class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message(
-            "Trimmer: leading and trailing whitespace removed.")
+        sublime.status_message("Trimmer: leading and trailing whitespace removed.")
 
     def get_selections(self):
         selections = self.view.sel()
@@ -122,8 +121,7 @@ class CollapseEmptyLines(sublime_plugin.TextCommand):
             trimmed = reobj.sub(r"\1\1", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message(
-            "Trimmer: empty lines collapsed.")
+        sublime.status_message("Trimmer: empty lines collapsed.")
 
     def get_selections(self):
         selections = self.view.sel()
@@ -150,7 +148,7 @@ class TrimEdges(sublime_plugin.TextCommand):
             trimmed = re.sub("(\\A\\s+|\\s+\\Z)", "", view.substr(region))
             view.replace(edit, region, trimmed)
 
-        sublime.status_message('Trimmer: file edges trimmed.')
+        sublime.status_message("Trimmer: file edges trimmed.")
 
 
 class TrimmerCommand(sublime_plugin.TextCommand):
