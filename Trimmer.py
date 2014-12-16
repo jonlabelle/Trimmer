@@ -3,28 +3,18 @@ import sublime_plugin
 import re
 
 
-class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
-
-    """ credit: Daryl Tucker https://github.com/daryltucker/MagiclessQuotes"""
+class TrimmerCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        self.edit = edit
+        view = self.view
 
-        replacements = [
-            [u'[’‘]{1}', u'\''],
-            [u'[“”]{1}', u'"'],
-            [u'[…]{1}', u'...'],
-            [u'[—]{1}', u'---'],
-            [u'[–]{1}', u'--'],
-            [u'[•]{1}', u'*']
-        ]
+        matched_regions = view.find_all("[\t ]+$")
+        matched_regions.reverse()
 
-        for replacement in replacements:
-            x = self.view.find_all(replacement[0])
-            for position in x:
-                self.view.replace(edit, position, replacement[1])
+        for r in matched_regions:
+            view.erase(edit, r)
 
-        sublime.status_message("Trimmer: smart characters replaced.")
+        sublime.status_message("Trimmer: trailing whitespace removed.")
 
 
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
@@ -176,15 +166,25 @@ class TrimEdges(sublime_plugin.TextCommand):
         sublime.status_message("Trimmer: file edges trimmed.")
 
 
-class TrimmerCommand(sublime_plugin.TextCommand):
+class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
+
+    """ credit: Daryl Tucker https://github.com/daryltucker/MagiclessQuotes"""
 
     def run(self, edit):
-        view = self.view
+        self.edit = edit
 
-        matched_regions = view.find_all("[\t ]+$")
-        matched_regions.reverse()
+        replacements = [
+            [u'[’‘]{1}', u'\''],
+            [u'[“”]{1}', u'"'],
+            [u'[…]{1}', u'...'],
+            [u'[—]{1}', u'---'],
+            [u'[–]{1}', u'--'],
+            [u'[•]{1}', u'*']
+        ]
 
-        for r in matched_regions:
-            view.erase(edit, r)
+        for replacement in replacements:
+            x = self.view.find_all(replacement[0])
+            for position in x:
+                self.view.replace(edit, position, replacement[1])
 
-        sublime.status_message("Trimmer: trailing whitespace removed.")
+        sublime.status_message("Trimmer: smart characters replaced.")
