@@ -20,137 +20,97 @@ class TrimmerCommand(sublime_plugin.TextCommand):
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        view = self.view
         reobj = re.compile("^[ \t]*$\r?\n", re.MULTILINE)
-        selections = self.get_selections()
 
-        for sel in selections:
-            trimmed = reobj.sub("", self.view.substr(sel))
-            self.view.replace(edit, sel, trimmed)
+        for region in self.selections(view):
+            trimmed = reobj.sub("", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message("Trimmer: empty lines deleted.")
 
-    def get_selections(self):
-        selections = self.view.sel()
-
-        has_selections = False
-        for sel in selections:
-            if sel.empty() is False:
-                has_selections = True
-
-        if not has_selections:
-            full_region = sublime.Region(0, self.view.size())
-            selections.add(full_region)
-
-        return selections
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
 
 
 class RemoveBlankSpaces(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        view = self.view
         reobj = re.compile("[ \\t\\r\\n\\v\\f]", re.MULTILINE)
-        selections = self.get_selections()
 
-        for sel in selections:
-            trimmed = reobj.sub("", self.view.substr(sel))
-            self.view.replace(edit, sel, trimmed)
+        for region in self.selections(view):
+            trimmed = reobj.sub("", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message("Trimmer: blanks spaces removed.")
 
-    def get_selections(self):
-        selections = self.view.sel()
-
-        has_selections = False
-        for sel in selections:
-            if sel.empty() is False:
-                has_selections = True
-
-        if not has_selections:
-            full_region = sublime.Region(0, self.view.size())
-            selections.add(full_region)
-
-        return selections
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
 
 
 class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        view = self.view
         reobj = re.compile("^[ \t]+", re.MULTILINE)
-        selections = self.get_selections()
 
-        for sel in selections:
-            trimmed = reobj.sub("", self.view.substr(sel))
-            self.view.replace(edit, sel, trimmed)
+        for region in self.selections(view):
+            trimmed = reobj.sub("", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message("Trimmer: leading whitespace removed.")
 
-    def get_selections(self):
-        selections = self.view.sel()
-
-        has_selections = False
-        for sel in selections:
-            if sel.empty() is False:
-                has_selections = True
-
-        if not has_selections:
-            full_region = sublime.Region(0, self.view.size())
-            selections.add(full_region)
-
-        return selections
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
 
 
 class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        view = self.view
         reobj = re.compile("^[ \t]+|[\t ]+$", re.MULTILINE)
-        selections = self.get_selections()
 
-        for sel in selections:
-            trimmed = reobj.sub("", self.view.substr(sel))
-            self.view.replace(edit, sel, trimmed)
+        for region in self.selections(view):
+            trimmed = reobj.sub("", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message(
             "Trimmer: leading and trailing whitespace removed.")
 
-    def get_selections(self):
-        selections = self.view.sel()
-
-        has_selections = False
-        for sel in selections:
-            if sel.empty() is False:
-                has_selections = True
-
-        if not has_selections:
-            full_region = sublime.Region(0, self.view.size())
-            selections.add(full_region)
-
-        return selections
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
 
 
 class CollapseEmptyLines(sublime_plugin.TextCommand):
 
     def run(self, edit):
+        view = self.view
         reobj = re.compile("(\r?\n){3,}", re.MULTILINE)
-        selections = self.get_selections()
 
-        for sel in selections:
-            trimmed = reobj.sub(r"\1\1", self.view.substr(sel))
-            self.view.replace(edit, sel, trimmed)
+        for region in self.selections(view):
+            trimmed = reobj.sub("", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message("Trimmer: empty lines collapsed.")
 
-    def get_selections(self):
-        selections = self.view.sel()
-
-        has_selections = False
-        for sel in selections:
-            if sel.empty() is False:
-                has_selections = True
-
-        if not has_selections:
-            full_region = sublime.Region(0, self.view.size())
-            selections.add(full_region)
-
-        return selections
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
 
 
 class TrimEdges(sublime_plugin.TextCommand):
@@ -168,10 +128,11 @@ class TrimEdges(sublime_plugin.TextCommand):
 
 class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
-    """ credit: Daryl Tucker https://github.com/daryltucker/MagiclessQuotes"""
-
     def run(self, edit):
+        view = self.view
 
+        """ credit Daryl Tucker
+        https://github.com/daryltucker/MagiclessQuotes"""
         replacements = [
             [u'[’‘]{1}', u'\''],
             [u'[“”]{1}', u'"'],
@@ -182,8 +143,8 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
         ]
 
         for replacement in replacements:
-            x = self.view.find_all(replacement[0])
+            x = view.find_all(replacement[0])
             for position in x:
-                self.view.replace(edit, position, replacement[1])
+                view.replace(edit, position, replacement[1])
 
         sublime.status_message("Trimmer: smart characters replaced.")
