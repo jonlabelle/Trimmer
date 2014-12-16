@@ -1,119 +1,134 @@
 [
 	{
-		"caption": "Edit",
-		"mnemonic": "E",
-		"id": "edit",
-		"children": [
+		"caption":"Edit",
+		"mnemonic":"E",
+		"id":"edit",
+		"children":[
 			{
-				"caption": "Line",
-				"mnemonic": "L",
-				"id": "line",
-				"children": [
+				"caption":"Line",
+				"mnemonic":"L",
+				"id":"line",
+				"children":[
 					{
-						"caption": "-"
+						"caption":"-"
 					},
 					{
-						"command": "trimmer",
-						"id": "trim-trailing-whitespace",
-						"caption": "Trim Trailing Whitespace"
+						"command":"trimmer",
+						"id":"trim-trailing-whitespace",
+						"caption":"Trim Trailing Whitespace"
 					},
 					{
-						"command": "trim_leading_whitespace",
-						"id": "trim-leading-whitespace",
-						"caption": "Trim Leading Whitespace"
+						"command":"trim_leading_whitespace",
+						"id":"trim-leading-whitespace",
+						"caption":"Trim Leading Whitespace"
 					},
 					{
-						"command": "trim_leading_trailing_whitespace",
-						"id": "trim-leading-trailing-whitespace",
-						"caption": "Trim Leading and Trailing Whitespace"
+						"command":"trim_leading_trailing_whitespace",
+						"id":"trim-leading-trailing-whitespace",
+						"caption":"Trim Leading and Trailing Whitespace"
 					},
 					{
-						"command": "delete_empty_lines",
-						"id": "delete-empty-lines",
-						"caption": "Delete Empty Lines"
+						"command":"delete_empty_lines",
+						"id":"delete-empty-lines",
+						"caption":"Delete Empty Lines"
 					},
 					{
-						"command": "collapse_empty_lines",
-						"id": "collapse-empty-lines",
-						"caption": "Collapse Empty Lines"
+						"command":"collapse_empty_lines",
+						"id":"collapse-empty-lines",
+						"caption":"Collapse Empty Lines"
 					},
 					{
-						"command": "trim_edges",
-						"id": "trim-edges",
-						"caption": "Trim File Edges"
+						"command":"trim_edges",
+						"id":"trim-edges",
+						"caption":"Trim File Edges"
 					},
 					{
-						"command": "remove_blank_spaces",
-						"id": "remove-blank-spaces",
-						"caption": "Remove Blank Spaces"
+						"command":"remove_blank_spaces",
+						"id":"remove-blank-spaces",
+						"caption":"Remove Blank Spaces"
+					}
+				]
+			},
+			{
+				"caption":"Text",
+				"mnemonic":"TE",
+				"id":"text",
+				"children":[
+					{
+						"caption":"-"
+					},
+					{
+						"command":"replace_smart_characters",
+						"id":"replace-smart-characters",
+						"caption":"Replace Smart Characters"
 					}
 				]
 			}
 		]
 	},
 	{
-		"caption": "Preferences",
-		"mnemonic": "n",
-		"id": "preferences",
-		"children": [
+		"caption":"Preferences",
+		"mnemonic":"n",
+		"id":"preferences",
+		"children":[
 			{
-				"caption": "Package Settings",
-				"mnemonic": "P",
-				"id": "package-settings",
-				"children": [
+				"caption":"Package Settings",
+				"mnemonic":"P",
+				"id":"package-settings",
+				"children":[
 					{
-						"caption": "Trimmer",
-						"children": [
+						"caption":"Trimmer",
+						"children":[
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/Trimmer/Default (Windows).sublime-keymap",
-									"platform": "Windows"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/Trimmer/Default (Windows).sublime-keymap",
+									"platform":"Windows"
 								},
-								"caption": "Key Bindings – Default"
+								"caption":"Key Bindings – Default"
 							},
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/Trimmer/Default (OSX).sublime-keymap",
-									"platform": "OSX"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/Trimmer/Default (OSX).sublime-keymap",
+									"platform":"OSX"
 								},
-								"caption": "Key Bindings – Default"
+								"caption":"Key Bindings – Default"
 							},
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/Trimmer/Default (Linux).sublime-keymap",
-									"platform": "Linux"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/Trimmer/Default (Linux).sublime-keymap",
+									"platform":"Linux"
 								},
-								"caption": "Key Bindings – Default"
+								"caption":"Key Bindings – Default"
 							},
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Windows).sublime-keymap",
-									"platform": "Windows"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/User/Default (Windows).sublime-keymap",
+									"platform":"Windows"
 								},
-								"caption": "Key Bindings – User"
+								"caption":"Key Bindings – User"
 							},
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (OSX).sublime-keymap",
-									"platform": "OSX"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/User/Default (OSX).sublime-keymap",
+									"platform":"OSX"
 								},
-								"caption": "Key Bindings – User"
+								"caption":"Key Bindings – User"
 							},
 							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Linux).sublime-keymap",
-									"platform": "Linux"
+								"command":"open_file",
+								"args":{
+									"file":"${packages}/User/Default (Linux).sublime-keymap",
+									"platform":"Linux"
 								},
-								"caption": "Key Bindings – User"
+								"caption":"Key Bindings – User"
 							},
 							{
-								"caption": "-"
+								"caption":"-"
 							}
 						]
 					}

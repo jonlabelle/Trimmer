@@ -3,6 +3,30 @@ import sublime_plugin
 import re
 
 
+class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
+
+    """ credit: Daryl Tucker https://github.com/daryltucker/MagiclessQuotes"""
+
+    def run(self, edit):
+        self.edit = edit
+
+        replacements = [
+            [u'[’‘]{1}', u'\''],
+            [u'[“”]{1}', u'"'],
+            [u'[…]{1}', u'...'],
+            [u'[—]{1}', u'---'],
+            [u'[–]{1}', u'--'],
+            [u'[•]{1}', u'*']
+        ]
+
+        for replacement in replacements:
+            x = self.view.find_all(replacement[0])
+            for position in x:
+                self.view.replace(edit, position, replacement[1])
+
+        sublime.status_message("Trimmer: smart characters replaced.")
+
+
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
@@ -94,7 +118,8 @@ class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", self.view.substr(sel))
             self.view.replace(edit, sel, trimmed)
 
-        sublime.status_message("Trimmer: leading and trailing whitespace removed.")
+        sublime.status_message(
+            "Trimmer: leading and trailing whitespace removed.")
 
     def get_selections(self):
         selections = self.view.sel()

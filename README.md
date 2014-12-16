@@ -2,6 +2,8 @@ Trimmer
 =======
 
 [Trimmer](http://jonlabelle.github.io/Trimmer/) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
+
+**Features**
  
 - Trim whitespace at the end of each line.
 - Trim whitespace at the start of each line.
@@ -10,6 +12,16 @@ Trimmer
 - Collapse multiple consecutive empty lines into one empty line.
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
+
+**Extra**
+
+- Replace *smart* characters command that peforms the following actions:
+	* **Smart single quotes:** `’‘` to `''`
+	* **Smart double quotes:** `“”` to `""`
+	* **Ellipses:** `…` to `...`
+	* **Em dash:** `—` to `---`
+	* **En dash:** `–` to `--`
+	* **Middot:** `•` to `*`
 
 Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
  
