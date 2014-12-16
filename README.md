@@ -13,15 +13,16 @@ Trimmer
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
 
-**Extra**
+**Extras**
 
-- Replace *smart* characters command that peforms the following actions:
-	* **Smart single quotes:** `’‘` to `''`
-	* **Smart double quotes:** `“”` to `""`
-	* **Ellipses:** `…` to `...`
-	* **Em dash:** `—` to `---`
-	* **En dash:** `–` to `--`
-	* **Middot:** `•` to `*`
+A **Replace Smart Characters** command that peforms the following actions:
+
+* **Smart single quotes:** `’‘` *to* `''`
+* **Smart double quotes:** `“”` *to* `""`
+* **Ellipses:** `…` *to* `...`
+* **Em dash:** `—` *to* `---`
+* **En dash:** `–` *to* `--`
+* **Middot:** `•` *to* `*`
 
 Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
  
