@@ -171,7 +171,6 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
     """ credit: Daryl Tucker https://github.com/daryltucker/MagiclessQuotes"""
 
     def run(self, edit):
-        self.edit = edit
 
         replacements = [
             [u'[’‘]{1}', u'\''],
