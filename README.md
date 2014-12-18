@@ -100,7 +100,7 @@ All commands are accessible from the **Command Palette** using prefix `Trimmer`,
 | `collapse_spaces`                  | collapse multiple consecutive spaces into one space                    | selection, or entire file |
 | `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
 | `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
-| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, etc.)    | selection, or entire file |
+| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, etc.)    | entire file               |
 
 ## Author
 
