@@ -43,6 +43,7 @@ class RemoveBlankSpaces(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
         reobj = re.compile("[ \\t\\r\\n\\v\\f]", re.MULTILINE)
+        reobj = re.compile(r"[ \t\r\n\v\f]")
 
         for region in self.selections(view):
             trimmed = reobj.sub("", view.substr(region))
