@@ -10,6 +10,7 @@ Trimmer
 - Trim whitespace at the start and end of each line.
 - Delete empty, whitespace only lines.
 - Collapse multiple consecutive empty lines into one empty line.
+- Collapse multiple consecutive spaces into one space.
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
 
@@ -19,7 +20,7 @@ A **Replace Smart Characters** command that peforms the following actions:
 
 * **Smart single quotes:** `’‘` *to* `''`
 * **Smart double quotes:** `“”` *to* `""`
-* **Ellipses:** `…` *to* `...`
+* **Ellipsis:** `…` *to* `...`
 * **Em dash:** `—` *to* `---`
 * **En dash:** `–` *to* `--`
 * **Middot:** `•` *to* `*`
@@ -95,9 +96,11 @@ All commands are accessible from the **Command Palette** using prefix `Trimmer`,
 | `trim_leading_whitespace`          | trim whitespace at the start of each line                              | selection, or entire file |
 | `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                      | selection, or entire file |
 | `delete_empty_lines`               | delete empty, whitespace only lines                                    | selection, or entire file |
-| `collapse_empty_lines`             | collapse multiple consecutive empty lines into one empty line          | selection, or entire file |
+| `collapse_lines`                   | collapse multiple consecutive empty lines into one empty line          | selection, or entire file |
+| `collapse_spaces`                  | collapse multiple consecutive spaces into one space                    | selection, or entire file |
 | `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
 | `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
+| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, etc.)    | selection, or entire file |
 
 ## Author
 

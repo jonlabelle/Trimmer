@@ -33,9 +33,14 @@
 						"caption":"Delete Empty Lines"
 					},
 					{
-						"command":"collapse_empty_lines",
-						"id":"collapse-empty-lines",
-						"caption":"Collapse Empty Lines"
+						"command":"collapse_lines",
+						"id":"collapse-lines",
+						"caption":"Collapse Lines"
+					},
+					{
+						"command":"collapse_spaces",
+						"id":"collapse-spaces",
+						"caption":"Collapse Spaces"
 					},
 					{
 						"command":"trim_edges",

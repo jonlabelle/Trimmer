@@ -16,8 +16,12 @@
 		"command": "delete_empty_lines"
 	},
 	{
-		"caption": "Trimmer: Collapse empty lines.",
-		"command": "collapse_empty_lines"
+		"caption": "Trimmer: Collapse lines.",
+		"command": "collapse_lines"
+	},
+	{
+		"caption": "Trimmer: Collapse spaces.",
+		"command": "collapse_spaces"
 	},
 	{
 		"caption": "Trimmer: Trim file edges.",

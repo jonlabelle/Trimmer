@@ -96,17 +96,40 @@ class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
         return regions
 
 
-class CollapseEmptyLines(sublime_plugin.TextCommand):
+class CollapseLines(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        reobj = re.compile("(\r?\n){3,}", re.MULTILINE)
+
+        re_trim_whitespace = re.compile("^[ \t]+|[\t ]+$", re.MULTILINE)
+        re_extra_lines = re.compile("\\r?\\n{2,}")
 
         for region in self.selections(view):
-            trimmed = reobj.sub("", view.substr(region))
+            strbuffer = view.substr(region)
+            strbuffer = re_trim_whitespace.sub("", strbuffer)
+            strbuffer = re_extra_lines.sub("\n\n", strbuffer)
+            view.replace(edit, region, strbuffer)
+
+        sublime.status_message("Trimmer: lines collapsed.")
+
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
+
+
+class CollapseSpaces(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        view = self.view
+        reobj = re.compile("[ ]{2,}")
+
+        for region in self.selections(view):
+            trimmed = reobj.sub(" ", view.substr(region))
             view.replace(edit, region, trimmed)
 
-        sublime.status_message("Trimmer: empty lines collapsed.")
+        sublime.status_message("Trimmer: spaces collapsed.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
