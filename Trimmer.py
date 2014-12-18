@@ -26,10 +26,13 @@ class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
         reobj = re.compile("^[ \t]*$\r?\n", re.MULTILINE)
 
         for region in self.selections(view):
-            trimmed = reobj.sub("", view.substr(region))
-            view.replace(edit, region, trimmed)
-
-        sublime.status_message("Trimmer: empty lines deleted.")
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub("", str_buffer)
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: no empty lines to delete.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: empty lines deleted.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
@@ -103,10 +106,13 @@ class CollapseLines(sublime_plugin.TextCommand):
         reobj = re.compile(r"(?:\s{0,})(\r?\n)(?:\s{0,})(?:\r?\n+)")
 
         for region in self.selections(view):
-            trimmed = reobj.sub(r"\1\1", view.substr(region))
-            view.replace(edit, region, trimmed)
-
-        sublime.status_message("Trimmer: lines collapsed.")
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub(r"\1\1", str_buffer)
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: no lines to collapse.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: lines collapsed.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
@@ -119,13 +125,16 @@ class CollapseSpaces(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        reobj = re.compile("[ ]{1,}")
+        reobj = re.compile("([ ]{1})[ ]{1,}")
 
         for region in self.selections(view):
-            trimmed = reobj.sub(" ", view.substr(region))
-            view.replace(edit, region, trimmed)
-
-        sublime.status_message("Trimmer: spaces collapsed.")
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub(r"\1", str_buffer)
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: no spaces to collapse.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: spaces collapsed.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
@@ -152,6 +161,7 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
+        has_matches = False
 
         """ credit Daryl Tucker
         https://github.com/daryltucker/MagiclessQuotes"""
@@ -168,5 +178,9 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             x = view.find_all(replacement[0])
             for position in x:
                 view.replace(edit, position, replacement[1])
+                has_matches = True
 
-        sublime.status_message("Trimmer: smart characters replaced.")
+        if has_matches:
+            sublime.status_message("Trimmer: smart characters replaced.")
+        else:
+            sublime.status_message("Trimmer: no smart characters to replace.")
