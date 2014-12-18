@@ -119,7 +119,7 @@ class CollapseSpaces(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        reobj = re.compile("[ ]{2,}")
+        reobj = re.compile("[ ]{1,}")
 
         for region in self.selections(view):
             trimmed = reobj.sub(" ", view.substr(region))
