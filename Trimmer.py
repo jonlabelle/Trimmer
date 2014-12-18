@@ -9,14 +9,19 @@ class TrimmerCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
+        has_matches = False
 
         matched_regions = view.find_all("[\t ]+$")
         matched_regions.reverse()
 
         for r in matched_regions:
             view.erase(edit, r)
+            has_matches = True
 
-        sublime.status_message("Trimmer: trailing whitespace removed.")
+        if has_matches:
+            sublime.status_message("Trimmer: trailing whitespace removed.")
+        else:
+            sublime.status_message("Trimmer: no trailing whitespace found.")
 
 
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
