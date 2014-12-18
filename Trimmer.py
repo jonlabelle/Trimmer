@@ -42,7 +42,6 @@ class RemoveBlankSpaces(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        reobj = re.compile("[ \\t\\r\\n\\v\\f]", re.MULTILINE)
         reobj = re.compile(r"[ \t\r\n\v\f]")
 
         for region in self.selections(view):
@@ -101,15 +100,11 @@ class CollapseLines(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-
-        re_trim_whitespace = re.compile("^[ \t]+|[\t ]+$", re.MULTILINE)
-        re_extra_lines = re.compile("\\r?\\n{2,}")
+        reobj = re.compile(r"(?:\s{0,})(\r?\n)(?:\s{0,})(?:\r?\n+)")
 
         for region in self.selections(view):
-            strbuffer = view.substr(region)
-            strbuffer = re_trim_whitespace.sub("", strbuffer)
-            strbuffer = re_extra_lines.sub("\n\n", strbuffer)
-            view.replace(edit, region, strbuffer)
+            trimmed = reobj.sub(r"\1\1", view.substr(region))
+            view.replace(edit, region, trimmed)
 
         sublime.status_message("Trimmer: lines collapsed.")
 
