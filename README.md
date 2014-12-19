@@ -3,7 +3,7 @@ Trimmer
 
 [Trimmer](http://jonlabelle.github.io/Trimmer) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
-**Features**
+## Features
  
 - Trim whitespace at the end of each line.
 - Trim whitespace at the start of each line.
@@ -14,38 +14,40 @@ Trimmer
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
 
-**Extras**
+### Additional Features
 
-A **Replace Smart Characters** command that peforms the following actions:
+A **Replace Smart Characters** command that performs the following actions:
 
 * **Smart single quotes:** `’‘` *to* `''`
 * **Smart double quotes:** `“”` *to* `""`
 * **Ellipsis:** `…` *to* `...`
 * **Em dash:** `—` *to* `---`
 * **En dash:** `–` *to* `--`
-* **Middot:** `•` *to* `*`
-
-Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
+* **Middle dot:** `•` *to* `*`
  
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
-  
-## Compatibility
 
-Trimmer is compatible with Sublime Text 2 and 3, on *all* OS platforms (OS X, Windows and Linux).
+Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
 
 ## Install
 
+Trimmer is compatible with **Sublime Text 2** and **3**, on all supported Operating 
+Systems (*OS X*, *Windows* and *Linux*).
+
 ### Package Control
 
-The easiest, and recommended way to install Trimmer is using [Package Control](https://sublime.wbond.net).
+The easiest, and recommended way to install Trimmer is using 
+[Package Control](https://sublime.wbond.net).
 
 From the main application menu, navigate to:
 
-- `Tools` -> `Command Palette...` -> `Package Control: Install Package`, type the word **`Trimmer`**, then select it to complete install.
+- `Tools` -> `Command Palette...` -> `Package Control: Install Package`, type
+  the word **`Trimmer`**, then select it to complete install.
 
 ### Git
 
-To install Trimmer using Git, change to your Sublime Text ***Packages*** directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
+To install Trimmer using Git, change to your Sublime Text ***Packages*** 
+directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
 	# on OS X... cd to your Packages directory and clone the Git repository
 	cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ &&
@@ -53,7 +55,11 @@ To install Trimmer using Git, change to your Sublime Text ***Packages*** directo
 
 ### Manually
 
-**Download** and **extract** the [zip file](https://github.com/jonlabelle/Trimmer/zipball/master) or [tarball](https://github.com/jonlabelle/Trimmer/tarball/master) to your Sublime Text ***Packages*** directory. Listed below are the *default* locations for Sublime Text Packages.
+**Download** and **extract** the [zip](https://github.com/jonlabelle/Trimmer/zipball/master) 
+or [tarball](https://github.com/jonlabelle/Trimmer/tarball/master) to your 
+Sublime Text packages directory.
+
+Here's the default Sublime Text Packages paths by OS.
 
 **OS X**
 
@@ -67,28 +73,27 @@ To install Trimmer using Git, change to your Sublime Text ***Packages*** directo
 
 	%APPDATA%/Sublime Text [2|3]/Packages
 
-> Don't forget to replace the `[2|3]` part with the appropriate Sublime Text version for your installation.
+> Don't forget to replace the `[2|3]` part with the appropriate Sublime Text 
+> version for your installation.
 
 ## Usage
 
+All commands are accessible from the **Command Palette** using prefix 
+`Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
+
+- [Command Palette screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
+- [Main Menu screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
+
 ### Key Bindings
 
-The *default* key binding will trim trailing whitespace at the end of each of line (entire file).
+The *default* key binding will trim trailing whitespace at the end of each of 
+line (entire file).
 
 - **OS X**: `Ctrl + S`
 - **Linux**: `Ctrl + Alt + S`
 - **Windows**: `Ctrl + Alt + S`
 
-## Command Accessibility
-
-All commands are accessible from the **Command Palette** using prefix `Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
-
-**Screenshots**
-
-- from the [Command Palette](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
-- from the [Main Menu](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
-
-## Trimmer Command API
+### Trimmer Command API
 
 |              Command               |                              Description                               |          Context          |
 |------------------------------------|------------------------------------------------------------------------|---------------------------|
