@@ -36,8 +36,7 @@ Systems (*OS X*, *Windows* and *Linux*).
 
 ### Package Control
 
-The easiest, and recommended way to install Trimmer is using
-[Package Control](https://sublime.wbond.net).
+The easiest, and recommended way to install Trimmer is using [Package Control](https://packagecontrol.io).
 
 From the main application menu, navigate to:
 
