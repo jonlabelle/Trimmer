@@ -24,6 +24,7 @@ A **Replace Smart Characters** command that performs the following actions:
 * **Em dash:** `—` *to* `---`
 * **En dash:** `–` *to* `--`
 * **Middle dot:** `•` *to* `*`
+* **Bullet:** `·` *to* `-`
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
 
