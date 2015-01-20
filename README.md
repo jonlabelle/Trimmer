@@ -25,6 +25,7 @@ A **Replace Smart Characters** command that performs the following actions:
 * **En dash:** `–` *to* `--`
 * **Middle dot:** `•` *to* `*`
 * **Bullet:** `·` *to* `-`
+* **Non-breaking space** *to* space
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
 
@@ -98,7 +99,7 @@ line (entire file).
 ### Trimmer Command API
 
 |              Command               |                              Description                               |          Context          |
-|------------------------------------|------------------------------------------------------------------------|---------------------------|
+| ---------------------------------- | ---------------------------------------------------------------------- | ------------------------- |
 | `trimmer`                          | trim whitespace at the end of each line                                | entire file               |
 | `trim_leading_whitespace`          | trim whitespace at the start of each line                              | selection, or entire file |
 | `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                      | selection, or entire file |
@@ -107,7 +108,7 @@ line (entire file).
 | `collapse_spaces`                  | collapse multiple consecutive spaces into one space                    | selection, or entire file |
 | `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
 | `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
-| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, etc.)    | entire file               |
+| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, nbsp)    | entire file               |
 
 ## Author
 
