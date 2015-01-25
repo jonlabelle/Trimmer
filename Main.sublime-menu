@@ -51,6 +51,9 @@
 						"command":"remove_blank_spaces",
 						"id":"remove-blank-spaces",
 						"caption":"Remove Blank Spaces"
+					},
+					{
+						"caption":"-"
 					}
 				]
 			},
@@ -66,6 +69,9 @@
 						"command":"replace_smart_characters",
 						"id":"replace-smart-characters",
 						"caption":"Replace Smart Characters"
+					},
+					{
+						"caption":"-"
 					}
 				]
 			}
