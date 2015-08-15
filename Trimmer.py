@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import re
 import sublime
 import sublime_plugin
-import re
 
 
 class TrimmerCommand(sublime_plugin.TextCommand):
