@@ -166,28 +166,36 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        has_matches = False
-
-        """ credit Daryl Tucker
-        https://github.com/daryltucker/MagiclessQuotes"""
+        source_text = replaced_text = ''
+        has_replacements = False
+        """ Credit to MagiclessQuotes by Daryl Tucker
+        (https://github.com/daryltucker/MagiclessQuotes)"""
         replacements = [
-            [u'[’‘]{1}', u'\''],
-            [u'[“”]{1}', u'"'],
-            [u'[…]{1}', u'...'],
-            [u'[—]{1}', u'---'],
-            [u'[–]{1}', u'--'],
-            [u'[•]{1}', u'*'],
-            [u'[·]{1}', u'-'],
-            [u'[ ]{1}', u' ']
+            [u'[’‘]', u'\''],
+            [u'[“”]', u'"'],
+            [u'[…]', u'...'],
+            [u'[—]', u'---'],
+            [u'[–]', u'--'],
+            [u'[•]', u'*'],
+            [u'[·]', u'-'],
+            [u'[ ]', u' ']
         ]
 
-        for replacement in replacements:
-            x = view.find_all(replacement[0])
-            for position in x:
-                view.replace(edit, position, replacement[1])
-                has_matches = True
+        for region in self.selections(view):
+            source_text = replaced_text = view.substr(region)
+            for replacement in replacements:
+                replaced_text = re.sub(replacement[0], replacement[1], source_text)
+                if source_text != replaced_text:
+                    has_replacements = True
+                    view.replace(edit, region, replaced_text)
 
-        if has_matches:
+        if has_replacements is True:
             sublime.status_message("Trimmer: smart characters replaced.")
         else:
             sublime.status_message("Trimmer: no smart characters to replace.")
+
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
