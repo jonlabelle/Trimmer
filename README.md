@@ -25,7 +25,11 @@ A **Replace Smart Characters** command that performs the following actions:
 * **En dash:** `–` *to* `--`
 * **Middle dot:** `•` *to* `*`
 * **Bullet:** `·` *to* `-`
-* **Non-breaking space** *to* space
+* **Em space** *to* three spaces
+* **En space** *to* two spaces
+* **Non-breaking space** *to* one space
+* **Thin space** *to* one space
+* **Hair space** *to* one space
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
 

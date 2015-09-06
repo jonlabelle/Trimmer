@@ -94,8 +94,7 @@ class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", view.substr(region))
             view.replace(edit, region, trimmed)
 
-        sublime.status_message(
-            "Trimmer: leading and trailing whitespace removed.")
+        sublime.status_message("Trimmer: leading and trailing whitespace removed.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
@@ -168,6 +167,7 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
         view = self.view
         source_text = replaced_text = ''
         has_replacements = False
+
         """ Credit to MagiclessQuotes by Daryl Tucker
         (https://github.com/daryltucker/MagiclessQuotes)"""
         replacements = [
@@ -178,16 +178,19 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             [u'[–]', u'--'],
             [u'[•]', u'*'],
             [u'[·]', u'-'],
-            [u'[ ]', u' ']
+            [u'[ ]', u'   '],
+            [u'[ ]', u'  '],
+            [u'[   ]', u' '],
         ]
 
-        for region in self.selections(view):
-            source_text = replaced_text = view.substr(region)
-            for replacement in replacements:
-                replaced_text = re.sub(replacement[0], replacement[1], source_text)
-                if source_text != replaced_text:
-                    has_replacements = True
-                    view.replace(edit, region, replaced_text)
+        for replacement in replacements:
+            for region in self.selections(view):
+                source_text = replaced_text = view.substr(region)
+                if len(source_text) > 0:
+                    replaced_text = re.sub(replacement[0], replacement[1], source_text)
+                    if source_text != replaced_text:
+                        has_replacements = True
+                        view.replace(edit, region, replaced_text)
 
         if has_replacements is True:
             sublime.status_message("Trimmer: smart characters replaced.")
