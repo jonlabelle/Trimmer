@@ -181,6 +181,8 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             [u'[ ]', u'   '],
             [u'[ ]', u'  '],
             [u'[   ]', u' '],
+            [u'[«]', u'<<'],
+            [u'[»]', u'>>']
         ]
 
         for replacement in replacements:

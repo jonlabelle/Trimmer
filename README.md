@@ -30,6 +30,8 @@ A **Replace Smart Characters** command that performs the following actions:
 * **Non-breaking space** *to* one space
 * **Thin space** *to* one space
 * **Hair space** *to* one space
+* **Left angle quote**: `«` *to* `<<`
+* **Right angle quote**: `»` *to* `>>`
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
 
