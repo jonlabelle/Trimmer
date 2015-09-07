@@ -13,7 +13,7 @@ Trimmer
 - Collapse multiple consecutive spaces into one space.
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
-- Normalize spaces (consecutive whitespace and lines reduced to one instance).
+- Normalize spaces (consecutive whitespace and lines reduced, and lines trimmed).
 
 ### Additional Features
 
@@ -105,18 +105,18 @@ line (entire file).
 
 ### Trimmer Command API
 
-|              Command               |                                Description                                |          Context          |
-|------------------------------------|---------------------------------------------------------------------------|---------------------------|
-| `trimmer`                          | trim whitespace at the end of each line                                   | entire file               |
-| `trim_leading_whitespace`          | trim whitespace at the start of each line                                 | selection, or entire file |
-| `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                         | selection, or entire file |
-| `delete_empty_lines`               | delete empty, whitespace only lines                                       | selection, or entire file |
-| `collapse_lines`                   | collapse multiple consecutive empty lines into one empty line             | selection, or entire file |
-| `collapse_spaces`                  | collapse multiple consecutive spaces into one space                       | selection, or entire file |
-| `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file    | entire file               |
-| `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)                | selection, or entire file |
-| `normalize_spaces`                 | consecutive whitespace and lines reduced to their one instance equivalent | selection, or entire file |
-| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, nbsp)       | selection, or entire file |
+|              Command               |                              Description                               |          Context          |
+|------------------------------------|------------------------------------------------------------------------|---------------------------|
+| `trimmer`                          | trim whitespace at the end of each line                                | entire file               |
+| `trim_leading_whitespace`          | trim whitespace at the start of each line                              | selection, or entire file |
+| `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                      | selection, or entire file |
+| `delete_empty_lines`               | delete empty, whitespace only lines                                    | selection, or entire file |
+| `collapse_lines`                   | collapse multiple consecutive empty lines into one empty line          | selection, or entire file |
+| `collapse_spaces`                  | collapse multiple consecutive spaces into one space                    | selection, or entire file |
+| `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
+| `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
+| `normalize_spaces`                 | consecutive whitespace and lines reduced, and lines trimmed            | selection, or entire file |
+| `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, nbsp)    | selection, or entire file |
 
 ## Author
 
