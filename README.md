@@ -13,7 +13,7 @@ Trimmer
 - Collapse multiple consecutive spaces into one space.
 - Trim empty, whitespace only lines at the beginning and end of the file.
 - Remove blank space characters.
-- Normalize spaces (consecutive whitespace and lines reduced, and lines trimmed).
+- Normalize spaces (consecutive spaces reduced, empty lines removed and lines trimmed).
 
 ### Additional Features
 
@@ -115,7 +115,7 @@ line (entire file).
 | `collapse_spaces`                  | collapse multiple consecutive spaces into one space                    | selection, or entire file |
 | `trim_edges`                       | trim empty, whitespace only lines at the beginning and end of the file | entire file               |
 | `remove_blank_spaces`              | remove all blank space characters (tab, cr, ff, vt, space)             | selection, or entire file |
-| `normalize_spaces`                 | consecutive whitespace and lines reduced, and lines trimmed            | selection, or entire file |
+| `normalize_spaces`                 | consecutive spaces reduced, empty lines removed and lines trimmed      | selection, or entire file |
 | `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, nbsp)    | selection, or entire file |
 
 ## Author
