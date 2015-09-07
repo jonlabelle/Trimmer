@@ -32,6 +32,10 @@
 		"command": "remove_blank_spaces"
 	},
 	{
+		"caption": "Trimmer: Normalize spaces.",
+		"command": "normalize_spaces"
+	},
+	{
 		"caption": "Trimmer: Replace smart characters.",
 		"command": "replace_smart_characters"
 	}

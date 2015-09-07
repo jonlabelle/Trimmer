@@ -94,7 +94,8 @@ class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
             trimmed = reobj.sub("", view.substr(region))
             view.replace(edit, region, trimmed)
 
-        sublime.status_message("Trimmer: leading and trailing whitespace removed.")
+        sublime.status_message(
+            "Trimmer: leading and trailing whitespace removed.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
@@ -147,6 +148,28 @@ class CollapseSpaces(sublime_plugin.TextCommand):
         return regions
 
 
+class NormalizeSpaces(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        view = self.view
+        reobj = re.compile("(^\\s+)|\\s(?=\\s+)|(\\s+$)")
+
+        for region in self.selections(view):
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub("", view.substr(region))
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: no spaces to normalize.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: spaces normalized.")
+
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
+
+
 class TrimEdges(sublime_plugin.TextCommand):
 
     def run(self, edit):
@@ -189,7 +212,8 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             for region in self.selections(view):
                 source_text = replaced_text = view.substr(region)
                 if len(source_text) > 0:
-                    replaced_text = re.sub(replacement[0], replacement[1], source_text)
+                    replaced_text = re.sub(
+                        replacement[0], replacement[1], source_text)
                     if source_text != replaced_text:
                         has_replacements = True
                         view.replace(edit, region, replaced_text)
