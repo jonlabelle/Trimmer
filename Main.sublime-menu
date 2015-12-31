@@ -59,7 +59,7 @@
 			},
 			{
 				"caption":"Text",
-				"mnemonic":"TE",
+				"mnemonic":"T",
 				"id":"text",
 				"children":[
 					{
