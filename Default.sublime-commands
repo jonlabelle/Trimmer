@@ -38,5 +38,9 @@
 	{
 		"caption": "Trimmer: Replace smart characters.",
 		"command": "replace_smart_characters"
+	},
+	{
+		"caption": "Trimmer: Tokenize string.",
+		"command": "tokenize_string"
 	}
 ]

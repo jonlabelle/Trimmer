@@ -71,6 +71,11 @@
 						"caption":"Replace Smart Characters"
 					},
 					{
+						"command":"tokenize_string",
+						"id":"tokenize-string",
+						"caption":"Tokenize String"
+					},
+					{
 						"caption":"-"
 					}
 				]

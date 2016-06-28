@@ -170,6 +170,28 @@ class NormalizeSpaces(sublime_plugin.TextCommand):
         return regions
 
 
+class TokenizeString(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        view = self.view
+        reobj = re.compile("^ +|( ){2,}| +$", re.MULTILINE)
+
+        for region in self.selections(view):
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub("", view.substr(region))
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: nothing to tokenize.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: string tokenized.")
+
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
+
+
 class TrimEdges(sublime_plugin.TextCommand):
 
     def run(self, edit):
