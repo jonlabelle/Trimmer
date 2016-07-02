@@ -16,7 +16,7 @@ Trimmer
 - Normalize spaces (consecutive spaces reduced, empty lines removed and lines trimmed).
 - Tokenize a string by collapsing consecutive spaces, and trimming leading and trailing spaces.
 
-### Additional Features
+## Additional Features
 
 A **Replace Smart Characters** command that performs the following actions:
 
@@ -41,8 +41,7 @@ Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh
 
 ## Install
 
-Trimmer is compatible with **Sublime Text 2** and **3**, on all supported Operating
-Systems (*OS X*, *Windows* and *Linux*).
+Trimmer is compatible with both Sublime Text 2 and 3 and all supported Operating Systems.
 
 ### Package Control
 
@@ -51,18 +50,20 @@ The easiest, and recommended way to install Trimmer is using [Package Control](h
 From the main application menu, navigate to:
 
 - `Tools` -> `Command Palette...` -> `Package Control: Install Package`, type
-  the word **`Trimmer`**, then select it to complete install.
+  the word ***Trimmer***, then select it to complete installation.
 
 ### Git
 
-To install Trimmer using Git, change to your Sublime Text ***Packages***
-directory, and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
+To install Trimmer using Git, change to your **Sublime Text Packages** directory
+and clone the [Trimmer repository](https://github.com/jonlabelle/Trimmer).
 
-For example, in *OS X*, start a *Terminal* session and enter the following 
-two commands:
+For example, on **OS X**... start a new **Terminal** session and enter the following
+commands:
 
-	$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-	$ git clone https://github.com/jonlabelle/Trimmer
+```shell
+$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+$ git clone https://github.com/jonlabelle/Trimmer
+```
 
 ### Manually
 
@@ -70,27 +71,19 @@ two commands:
 or [tarball](https://github.com/jonlabelle/Trimmer/tarball/master) to your
 Sublime Text packages directory.
 
-Here's the default Sublime Text Packages paths by OS.
+**Default Sublime Text Packages Paths:**
 
-**OS X**
+* **OS X:** `~/Library/Application Support/Sublime Text [2|3]/Packages`
+* **Linux:** `~/.Sublime Text [2|3]/Packages`
+* **Windows:** `%APPDATA%/Sublime Text [2|3]/Packages`
 
-	~/Library/Application Support/Sublime Text [2|3]/Packages
-
-**Linux**
-
-	~/.Sublime Text [2|3]/Packages
-
-**Windows**
-
-	%APPDATA%/Sublime Text [2|3]/Packages
-
-> Don't forget to replace the `[2|3]` part with the appropriate Sublime Text
+> **NOTE** Replace the `[2|3]` part with the appropriate Sublime Text
 > version for your installation.
 
 ## Usage
 
 All commands are accessible from the **Command Palette** using prefix
-`Trimmer`, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
+***Trimmer***, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
 
 - [Command Palette screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
 - [Main Menu screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
