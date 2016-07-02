@@ -1,7 +1,7 @@
 Trimmer
 =======
 
-[Trimmer](http://jonlabelle.github.io/Trimmer) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
+[Trimmer](https://jonlabelle.github.io/Trimmer/) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
 ## Features
 
@@ -115,7 +115,7 @@ line (entire file).
 
 ## Author
 
-[Jon LaBelle](http://jonlabelle.com)
+[Jon LaBelle](https://jonlabelle.com)
 
 ## License
 
