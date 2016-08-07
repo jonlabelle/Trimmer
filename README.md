@@ -1,6 +1,8 @@
 Trimmer
 =======
 
+[![Downloads](https://packagecontrol.herokuapp.com/downloads/Trimmer.svg?color=80d4cd)](https://packagecontrol.io/packages/Trimmer)
+
 [Trimmer](https://jonlabelle.github.io/Trimmer/) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
 ## Features
