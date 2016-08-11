@@ -216,8 +216,9 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
         """ Credit to MagiclessQuotes by Daryl Tucker
         (https://github.com/daryltucker/MagiclessQuotes)"""
         replacements = [
-            [u'[’‘]', u'\''],
+            [u'[’‘‚]', u'\''],
             [u'[“”]', u'"'],
+            [u'[„]', u'"'],
             [u'[…]', u'...'],
             [u'[—]', u'---'],
             [u'[–]', u'--'],
