@@ -210,7 +210,6 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
-        source_text = replaced_text = ''
         has_replacements = False
 
         """ Credit to MagiclessQuotes by Daryl Tucker
@@ -233,7 +232,7 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
         for replacement in replacements:
             for region in self.selections(view):
-                source_text = replaced_text = view.substr(region)
+                source_text = view.substr(region)
                 if len(source_text) > 0:
                     replaced_text = re.sub(
                         replacement[0], replacement[1], source_text)
