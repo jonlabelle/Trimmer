@@ -79,6 +79,23 @@
 						"caption":"-"
 					}
 				]
+			},
+			{
+				"caption":"Tag",
+				"id":"tag",
+				"children":[
+					{
+						"caption":"-"
+					},
+					{
+						"command":"delete_empty_tags",
+						"id":"delete-empty-tags",
+						"caption":"Delete Empty Tags"
+					},
+					{
+						"caption":"-"
+					}
+				]
 			}
 		]
 	},

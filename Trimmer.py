@@ -206,6 +206,28 @@ class TrimEdges(sublime_plugin.TextCommand):
         sublime.status_message("Trimmer: file edges trimmed.")
 
 
+class DeleteEmptyTags(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        view = self.view
+        reobj = re.compile(r"<([A-Z][A-Z0-9]*)\b[^>]*>\s*</\1>", re.IGNORECASE)
+
+        for region in self.selections(view):
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub("", str_buffer)
+            if str_buffer == trimmed:
+                sublime.status_message("Trimmer: no empty tags to delete.")
+            else:
+                view.replace(edit, region, trimmed)
+                sublime.status_message("Trimmer: empty tags deleted.")
+
+    def selections(self, view, default_to_all=True):
+        regions = [r for r in view.sel() if not r.empty()]
+        if not regions and default_to_all:
+            regions = [sublime.Region(0, view.size())]
+        return regions
+
+
 class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):

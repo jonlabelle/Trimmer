@@ -42,5 +42,9 @@
 	{
 		"caption": "Trimmer: Tokenize string.",
 		"command": "tokenize_string"
+	},
+	{
+		"caption": "Trimmer: Delete empty tags.",
+		"command": "delete_empty_tags"
 	}
 ]
