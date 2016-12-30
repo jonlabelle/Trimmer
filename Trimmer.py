@@ -210,16 +210,20 @@ class DeleteEmptyTags(sublime_plugin.TextCommand):
 
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile(r"<([A-Z][A-Z0-9]*)\b[^>]*>\s*</\1>", re.IGNORECASE)
 
         for region in self.selections(view):
             str_buffer = view.substr(region)
             trimmed = reobj.sub("", str_buffer)
-            if str_buffer == trimmed:
-                sublime.status_message("Trimmer: no empty tags to delete.")
-            else:
+            if str_buffer != trimmed:
+                has_matches = True
                 view.replace(edit, region, trimmed)
-                sublime.status_message("Trimmer: empty tags deleted.")
+
+        if has_matches is True:
+            sublime.status_message("Trimmer: empty tags deleted.")
+        else:
+            sublime.status_message("Trimmer: no empty tags to delete.")
 
     def selections(self, view, default_to_all=True):
         regions = [r for r in view.sel() if not r.empty()]
