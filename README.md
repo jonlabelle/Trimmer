@@ -39,9 +39,9 @@ A **Replace Smart Characters** command that performs the following actions:
 * **Left angle quote**: `«` *to* `<<`
 * **Right angle quote**: `»` *to* `>>`
 
-![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
+![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
 
-Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_demo.gif)
+Watch a [**Quick Demo**](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/demo.gif)
 
 ## Install
 
@@ -89,8 +89,8 @@ Sublime Text packages directory.
 All commands are accessible from the **Command Palette** using prefix
 ***Trimmer***, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
 
-- [Command Palette screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_cmd_palette.png)
-- [Main Menu screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/gh-pages/images/trimmer_ss_main_menu.png)
+- [Command Palette screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
+- [Main Menu screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/main_menu.png)
 
 ### Key Bindings
 
