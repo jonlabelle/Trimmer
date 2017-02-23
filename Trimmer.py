@@ -17,11 +17,10 @@ class TrimmerCommand(sublime_plugin.TextCommand):
         view = self.view
         has_matches = False
 
-        matched_regions = view.find_all('[\t ]+$')
-        matched_regions.reverse()
-
-        for r in matched_regions:
-            view.erase(edit, r)
+        regions = view.find_all('[\t ]+$')
+        regions.reverse()
+        for region in regions:
+            view.erase(edit, region)
             has_matches = True
 
         if has_matches:
@@ -35,126 +34,191 @@ class TrimmerCommand(sublime_plugin.TextCommand):
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile('^[ \t]*$\r?\n', re.MULTILINE)
 
         for region in selections(view):
             str_buffer = view.substr(region)
             trimmed = reobj.sub('', str_buffer)
-            if str_buffer == trimmed:
-                sublime.status_message('Trimmer: no empty lines to delete.')
-            else:
+            if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
-                sublime.status_message('Trimmer: empty lines deleted.')
+                has_matches = True
+
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: empty lines deleted.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no empty lines to delete.'), 0)
 
 
 class RemoveBlankSpaces(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile(r'[ \t\r\n\v\f]')
 
         for region in selections(view):
-            trimmed = reobj.sub('', view.substr(region))
-            view.replace(edit, region, trimmed)
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
+                view.replace(edit, region, trimmed)
+                has_matches = True
 
-        sublime.status_message('Trimmer: blanks spaces removed.')
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: blanks spaces removed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no blank spaces to remove.'), 0)
 
 
 class TrimLeadingWhitespaceCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile('^[ \t]+', re.MULTILINE)
 
         for region in selections(view):
-            trimmed = reobj.sub('', view.substr(region))
-            view.replace(edit, region, trimmed)
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
+                view.replace(edit, region, trimmed)
+                has_matches = True
 
-        sublime.status_message('Trimmer: leading whitespace removed.')
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: leading whitespace removed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no leading whitespace to remove.'), 0)
 
 
 class TrimLeadingTrailingWhitespace(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile('^[ \t]+|[\t ]+$', re.MULTILINE)
 
         for region in selections(view):
-            trimmed = reobj.sub("", view.substr(region))
-            view.replace(edit, region, trimmed)
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
+                view.replace(edit, region, trimmed)
+                has_matches = True
 
-        sublime.status_message(
-            'Trimmer: leading and trailing whitespace removed.')
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: leading and trailing whitespace removed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no leading or trailing whitespace to remove.'), 0)
 
 
 class CollapseLines(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile(r'(?:\s*)(\r?\n)(?:\s*)(?:\r?\n+)')
 
         for region in selections(view):
             str_buffer = view.substr(region)
             trimmed = reobj.sub(r'\1\1', str_buffer)
-            if str_buffer == trimmed:
-                sublime.status_message('Trimmer: no lines to collapse.')
-            else:
+            if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
-                sublime.status_message('Trimmer: lines collapsed.')
+                has_matches = True
+
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: lines collapsed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no lines to collapse.'), 0)
 
 
 class CollapseSpaces(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile('([ ])[ ]+')
 
         for region in selections(view):
             str_buffer = view.substr(region)
             trimmed = reobj.sub(r'\1', str_buffer)
-            if str_buffer == trimmed:
-                sublime.status_message('Trimmer: no spaces to collapse.')
-            else:
+            if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
-                sublime.status_message('Trimmer: spaces collapsed.')
+                has_matches = True
+
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: spaces collapsed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no spaces to collapse.'), 0)
 
 
 class NormalizeSpaces(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile('(^\\s+)|\\s(?=\\s+)|(\\s+$)')
 
         for region in selections(view):
             str_buffer = view.substr(region)
-            trimmed = reobj.sub("", view.substr(region))
-            if str_buffer == trimmed:
-                sublime.status_message('Trimmer: no spaces to normalize.')
-            else:
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
-                sublime.status_message('Trimmer: spaces normalized.')
+                has_matches = True
+
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: spaces normalized.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no spaces to normalize.'), 0)
 
 
 class TokenizeString(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
-        reobj = re.compile('^ +|( ){2,}| +$', re.MULTILINE)
+        has_matches = False
+        reobj = re.compile('^ |\t+|( ){2,}|\t| |\t+$', re.MULTILINE)
 
         for region in selections(view):
             str_buffer = view.substr(region)
-            trimmed = reobj.sub('', view.substr(region))
-            if str_buffer == trimmed:
-                sublime.status_message('Trimmer: nothing to tokenize.')
-            else:
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
-                sublime.status_message('Trimmer: string tokenized.')
+                has_matches = True
+
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: string tokenized.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: nothing to tokenize.'), 0)
 
 
 class TrimEdges(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
+        has_matches = False
         reobj = re.compile(r'(\A\s+|\s+\Z)')
 
         if view.size() > 0:
             region = sublime.Region(0, view.size())
-            trimmed = reobj.sub('', view.substr(region))
-            view.replace(edit, region, trimmed)
+            str_buffer = view.substr(region)
+            trimmed = reobj.sub('', str_buffer)
+            if str_buffer != trimmed:
+                view.replace(edit, region, trimmed)
+                has_matches = True
 
-        sublime.status_message('Trimmer: file edges trimmed.')
+        if has_matches is True:
+            return sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: file edges trimmed.'), 0)
+        else:
+            return sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no file edges to trim.'), 0)
 
 
 class DeleteEmptyTags(sublime_plugin.TextCommand):
@@ -167,21 +231,23 @@ class DeleteEmptyTags(sublime_plugin.TextCommand):
             str_buffer = view.substr(region)
             trimmed = reobj.sub('', str_buffer)
             if str_buffer != trimmed:
-                has_matches = True
                 view.replace(edit, region, trimmed)
+                has_matches = True
 
         if has_matches is True:
-            sublime.status_message('Trimmer: empty tags deleted.')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: empty tags deleted.'), 0)
         else:
-            sublime.status_message('Trimmer: no empty tags to delete.')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no empty tags to delete.'), 0)
 
 
 class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
-        has_replacements = False
+        has_matches = False
 
-        replacements = [
+        smart_replacements = [
             [u'[’‘‚]', u'\''],
             [u'[“”]', u'"'],
             [u'[„]', u'"'],
@@ -197,17 +263,19 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             [u'[»]', u'>>']
         ]
 
-        for replacement in replacements:
+        for replacement in smart_replacements:
             for region in selections(view):
                 source_text = view.substr(region)
                 if len(source_text) > 0:
                     replaced_text = re.sub(
                         replacement[0], replacement[1], source_text)
                     if source_text != replaced_text:
-                        has_replacements = True
                         view.replace(edit, region, replaced_text)
+                        has_matches = True
 
-        if has_replacements is True:
-            sublime.status_message('Trimmer: smart characters replaced.')
+        if has_matches is True:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: smart characters replaced.'), 0)
         else:
-            sublime.status_message('Trimmer: no smart characters to replace.')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no smart characters to replace.'), 0)
