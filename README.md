@@ -13,7 +13,7 @@ Trimmer
 - Delete empty, whitespace only lines.
 - Collapse multiple consecutive empty lines into one empty line.
 - Collapse multiple consecutive spaces into one space.
-- Trim empty, whitespace only lines at the beginning and end of the file.
+- Trim empty, whitespace only lines at the beginning and end of file.
 - Remove blank space characters.
 - Normalize spaces (consecutive spaces reduced, empty lines removed and lines trimmed).
 - Tokenize a string by collapsing consecutive spaces, and trimming leading and trailing spaces.
