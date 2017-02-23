@@ -25,9 +25,11 @@ class TrimmerCommand(sublime_plugin.TextCommand):
             has_matches = True
 
         if has_matches:
-            sublime.status_message('Trimmer: trailing whitespace removed.')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: trailing whitespace removed.'), 0)
         else:
-            sublime.status_message('Trimmer: no trailing whitespace found.')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no trailing whitespace found.'), 0)
 
 
 class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
