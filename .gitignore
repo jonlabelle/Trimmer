@@ -1,2 +1,7 @@
-*.pyc
 .DS_Store
+*.py[co]
+.cache
+__pycache__
+README.html
+tmp
+.idea

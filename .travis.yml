@@ -9,11 +9,11 @@ python:
 
 # install dependencies:
 install:
-  - pip install flake8
+  - sh install.sh
 
 # run tests:
 script:
-  - flake8 .
+  - sh run_tests.sh
 
 # disable email build notifications:
 notifications:
