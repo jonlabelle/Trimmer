@@ -3,4 +3,5 @@
 set -e
 set -x
 
+pytest
 flake8
