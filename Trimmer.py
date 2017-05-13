@@ -242,6 +242,46 @@ class DeleteEmptyTags(sublime_plugin.TextCommand):
                 'Trimmer: no empty tags to delete.'), 0)
 
 
+class TrimSelections(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        """
+        Trim leading and trailing whitespace from selections.
+
+        Originally from the 'Multi​Edit​Utils' Plug-in
+        https://github.com/philippotto/Sublime-MultiEditUtils
+        """
+        view = self.view
+        selection = view.sel()
+        new_regions = []
+
+        for currentRegion in selection:
+            text = view.substr(currentRegion)
+
+            l_stripped_text = text.lstrip()
+            r_stripped_text = l_stripped_text.rstrip()
+
+            l_stripped_count = len(text) - len(l_stripped_text)
+            r_stripped_count = len(l_stripped_text) - len(r_stripped_text)
+
+            a = currentRegion.begin() + l_stripped_count
+            b = currentRegion.end() - r_stripped_count
+
+            if a == b:
+                # the region only contained whitespace
+                # use the old selection end to avoid jumping of cursor
+                a = b = currentRegion.b
+
+            new_regions.append(sublime.Region(a, b))
+
+        selection.clear()
+        for region in new_regions:
+            selection.add(region)
+
+        sublime.set_timeout(lambda: sublime.status_message(
+            'Trimmer: selections trimmed.'), 0)
+
+
 class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view

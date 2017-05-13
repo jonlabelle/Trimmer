@@ -9,6 +9,7 @@
 - Trim whitespace at the end of each line.
 - Trim whitespace at the start of each line.
 - Trim whitespace at the start and end of each line.
+- Trim whitespace from selection(s).
 - Delete empty, whitespace only lines.
 - Collapse multiple consecutive empty lines into one empty line.
 - Collapse multiple consecutive spaces into one space.
@@ -107,6 +108,7 @@ line (entire file).
 | `trimmer`                          | trim whitespace at the end of each line                                                                | entire file               |
 | `trim_leading_whitespace`          | trim whitespace at the start of each line                                                              | selection, or entire file |
 | `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                                                      | selection, or entire file |
+| `trim_selections`                  | trim whitespace from selection(s)                                                                      | selection                 |
 | `delete_empty_lines`               | delete empty, whitespace only lines                                                                    | selection, or entire file |
 | `collapse_lines`                   | collapse multiple consecutive empty lines into one empty line                                          | selection, or entire file |
 | `collapse_spaces`                  | collapse multiple consecutive spaces into one space                                                    | selection, or entire file |

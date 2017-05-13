@@ -28,6 +28,11 @@
 						"caption": "Trim Leading and Trailing Whitespace"
 					},
 					{
+						"command": "trim_selections",
+						"id": "trim-selections",
+						"caption": "Trim Selections"
+					},
+					{
 						"command": "delete_empty_lines",
 						"id": "delete-empty-lines",
 						"caption": "Delete Empty Lines"

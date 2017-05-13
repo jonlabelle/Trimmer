@@ -12,6 +12,10 @@
 		"command": "trim_leading_trailing_whitespace"
 	},
 	{
+		"caption": "Trimmer: Trim selections.",
+		"command": "trim_selections"
+	},
+	{
 		"caption": "Trimmer: Delete empty lines.",
 		"command": "delete_empty_lines"
 	},
