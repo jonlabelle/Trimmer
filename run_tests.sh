@@ -3,5 +3,5 @@
 set -e
 set -x
 
-pytest
+py.test
 flake8
