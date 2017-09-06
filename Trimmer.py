@@ -12,6 +12,12 @@ def selections(view, default_to_all=True):
     return regions
 
 
+def contains(needle, haystack):
+    if not needle or not haystack:
+        return False
+    return needle in haystack
+
+
 class TrimmerCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
@@ -287,8 +293,10 @@ class RemoveComments(sublime_plugin.TextCommand):
         view = self.view
         has_matches = False
 
+        #
+        # TODO: rework this brute force approach and filter by syntax/scope
         re_single_line_comments = re.compile(r"//.*$", re.MULTILINE)
-        re_hash_comments = re.compile("#.*$", re.MULTILINE)
+        re_hash_comments = re.compile("#[^!].*$", re.MULTILINE)
         re_html_comments = re.compile("<!--.*?-->", re.DOTALL)
         re_block_comments = re.compile(r"/\*.*?\*/", re.DOTALL)
 
