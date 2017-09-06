@@ -1,6 +1,6 @@
 # Trimmer
 
-[![Build Status](https://travis-ci.org/jonlabelle/Trimmer.svg?branch=master)](https://travis-ci.org/jonlabelle/Trimmer) [![Build status](https://ci.appveyor.com/api/projects/status/fdcdvfsip9d9efg3?svg=true)](https://ci.appveyor.com/project/jonlabelle/trimmer) [![Downloads](https://packagecontrol.herokuapp.com/downloads/Trimmer.svg?color=80d4cd)](https://packagecontrol.io/packages/Trimmer)
+[![Travis CI Build Status](https://travis-ci.org/jonlabelle/Trimmer.svg?branch=master)](https://travis-ci.org/jonlabelle/Trimmer) [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/fdcdvfsip9d9efg3?svg=true)](https://ci.appveyor.com/project/jonlabelle/trimmer) [![Package Control Downloads](https://img.shields.io/packagecontrol/dt/Trimmer.svg)](https://packagecontrol.io/packages/Trimmer)
 
 [Trimmer](https://github.com/jonlabelle/Trimmer) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
