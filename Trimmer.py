@@ -255,8 +255,8 @@ class TrimSelections(sublime_plugin.TextCommand):
         selection = view.sel()
         new_regions = []
 
-        for currentRegion in selection:
-            text = view.substr(currentRegion)
+        for current_region in selection:
+            text = view.substr(current_region)
 
             l_stripped_text = text.lstrip()
             r_stripped_text = l_stripped_text.rstrip()
@@ -264,13 +264,13 @@ class TrimSelections(sublime_plugin.TextCommand):
             l_stripped_count = len(text) - len(l_stripped_text)
             r_stripped_count = len(l_stripped_text) - len(r_stripped_text)
 
-            a = currentRegion.begin() + l_stripped_count
-            b = currentRegion.end() - r_stripped_count
+            a = current_region.begin() + l_stripped_count
+            b = current_region.end() - r_stripped_count
 
             if a == b:
                 # the region only contained whitespace
                 # use the old selection end to avoid jumping of cursor
-                a = b = currentRegion.b
+                a = b = current_region.b
 
             new_regions.append(sublime.Region(a, b))
 
@@ -280,6 +280,35 @@ class TrimSelections(sublime_plugin.TextCommand):
 
         sublime.set_timeout(lambda: sublime.status_message(
             'Trimmer: selections trimmed.'), 0)
+
+
+class RemoveComments(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        has_matches = False
+
+        re_single_line_comments = re.compile(r"//.*$", re.MULTILINE)
+        re_hash_comments = re.compile("#.*$", re.MULTILINE)
+        re_html_comments = re.compile("<!--.*?-->", re.DOTALL)
+        re_block_comments = re.compile(r"/\*.*?\*/", re.DOTALL)
+
+        for region in selections(view):
+            str_buffer = view.substr(region)
+            trimmed = re_single_line_comments.sub('', str_buffer)
+            trimmed = re_hash_comments.sub('', trimmed)
+            trimmed = re_html_comments.sub('', trimmed)
+            trimmed = re_block_comments.sub('', trimmed)
+            if str_buffer != trimmed:
+                view.replace(edit, region, trimmed)
+                has_matches = True
+
+        if has_matches is True:
+            view.run_command('collapse_lines')
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: comments removed.'), 0)
+        else:
+            sublime.set_timeout(lambda: sublime.status_message(
+                'Trimmer: no comments to remove.'), 0)
 
 
 class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):

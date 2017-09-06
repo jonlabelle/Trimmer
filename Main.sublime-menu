@@ -81,6 +81,11 @@
 						"caption": "Tokenize String"
 					},
 					{
+						"command": "remove_comments",
+						"id": "remove-comments",
+						"caption": "Remove Comments"
+					},
+					{
 						"caption": "-"
 					}
 				]

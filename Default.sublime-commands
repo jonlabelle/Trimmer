@@ -50,5 +50,9 @@
 	{
 		"caption": "Trimmer: Delete empty tags.",
 		"command": "delete_empty_tags"
+	},
+	{
+		"caption": "Trimmer: Remove comments.",
+		"command": "remove_comments"
 	}
 ]

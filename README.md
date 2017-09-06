@@ -18,6 +18,7 @@
 - Normalize spaces (consecutive spaces reduced, empty lines removed and lines trimmed).
 - Tokenize a string by collapsing consecutive spaces, and trimming leading and trailing spaces.
 - Delete empty, whitespace only HTML and XML tags.
+- Remove code comments and collapse lines.
 
 ## Additional Features
 
@@ -118,6 +119,7 @@ line (entire file).
 | `replace_smart_characters`         | replace smart characters (smart quotes, em/en dash, ellipsis, nbsp)                                    | selection, or entire file |
 | `tokenize_string`                  | convert a string to a token by collapsing consecutive spaces, and trimming leading and trailing spaces | selection, or entire file |
 | `delete_empty_tags`                | delete empty, whitespace only html and xml tags                                                        | selection, or entire file |
+| `remove_comments`                  | remove code comments and collapse lines                                                                | selection, or entire file |
 
 ## Author
 
