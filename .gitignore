@@ -2,6 +2,8 @@
 *.py[co]
 .cache
 __pycache__
-README.html
-tmp
-.idea
+*.html
+/tmp/
+/.idea/
+/.scannerwork/
+/.env
