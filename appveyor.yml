@@ -1,13 +1,13 @@
 environment:
-
   matrix:
-    - PYTHON: "C:\\Python27"
-    - PYTHON: "C:\\Python33"
+    - PYTHON: C:\Python27
+    - PYTHON: C:\Python33
 
 install:
-  - "install.cmd %PYTHON%"
-
-build: off
+  - scripts\install.cmd %PYTHON%
 
 test_script:
-  - "run_tests.cmd %PYTHON%"
+  - scripts\run_tests.cmd %PYTHON%
+
+build: off
+version: "{build}"

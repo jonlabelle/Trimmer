@@ -1,5 +1,4 @@
-# recommended by travis support:
-sudo: required
+sudo: false
 
 language: python
 
@@ -7,14 +6,11 @@ python:
   - "2.7"
   - "3.3"
 
-# install dependencies:
 install:
-  - bash install.sh
+  - bash scripts/install.sh
 
-# run tests:
 script:
-  - bash run_tests.sh
+  - bash scripts/run_tests.sh
 
-# disable email build notifications:
 notifications:
   email: false
