@@ -56,7 +56,7 @@ cd_project_root() {
     pushd "${SCRIPTSDIR}" && pushd ..
 }
 
-restore_previous_working_dir() {
+cd_previous_working_dir() {
     show_info '> Restore previous working directory'
     popd && popd
 }
@@ -112,7 +112,7 @@ main() {
     ensure_git_repo_is_clean
     confirm_git_commit_tag_release
     git_commit_tag_release
-    restore_previous_working_dir
+    cd_previous_working_dir
 
     echo && show_success "Finished." && echo
 }
