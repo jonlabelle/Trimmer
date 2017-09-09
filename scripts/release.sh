@@ -4,7 +4,6 @@
 # Release tasks bulked into one script w/ user
 # intervention/confirmation required.
 #
-# - Commit and push the change (to master).
 # - Create and push passed <semver> arg (1) git tag.
 #
 # Usage:
@@ -77,6 +76,17 @@ ensure_git_branch_is_master() {
     fi
 }
 
+ensure_git_branch_is_up_to_date() {
+    # compare local/remote hashes: https://stackoverflow.com/a/15119807
+    show_info "> Ensure 'master' branch is up-to-date with remote"
+    local git_local_hash="$(git rev-parse --verify origin/master)"
+    local git_remote_hash="$(git ls-remote origin master | cut -d$'\t' -f 1)"
+    if [ "$git_local_hash" != "$git_remote_hash" ]; then
+        show_error "git remote history differs. please pull remote changes first."then
+        exit 1
+    fi
+}
+
 ensure_git_repo_is_clean() {
     show_info "> Ensure repo is clean"
     if ! git diff-index --quiet HEAD --; then
@@ -105,10 +115,12 @@ git_commit_tag_release() {
     set +x
 }
 
+
 main() {
     validate_version
     cd_project_root
     ensure_git_branch_is_master
+    ensure_git_branch_is_up_to_date
     ensure_git_repo_is_clean
     confirm_git_commit_tag_release
     git_commit_tag_release
@@ -116,7 +128,6 @@ main() {
 
     echo && show_success "Finished." && echo
 }
-
 
 if [ $# -eq 0 ]; then
     show_error "you must specify a valid semver/version number for the release."
