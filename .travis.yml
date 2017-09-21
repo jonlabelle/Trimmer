@@ -6,7 +6,7 @@ addons:
     organization: "jonlabelle-github"
     token:
       secure: "ccqbFD3T4Kd87e3PwmqEKIF0uXTbqfgwNBAfxagIm09/3mNWO//uUljc7yl1YHGqmmuBFROY5ZkgSTfObUVKa3qVedkO5yO+e1Y8/hu3OokiSZ0rTBZWZ9loAzK709uwroUulbTbn8nwVxwTtJ5Ai69ANqH11bxGd5sRPH3DQQz3jeBeX6VbDT0IgeuCb9gXltW+TYuK8m8wjlj5oXxtJPKrQzi2cJS8PbP9bENo2J27+MJa4zSOAyUzDaj3e1cAoDLQOcUTg0qumTlGpYyW9ToVKE8Z6JAmfiaPi/oB8jEvhSCPV5ekDVahw/zO5qQ7wHB9Lk0GaqIdKQezQJOt27Iig5Bg0tMJBVZ3yNgG/44hskTh42n4UJChYHVfsql7mKL2jLEbW4eeI/VjVpCT9fvYUuY9wdecZs9gf33BJCT3aoilbX3MvXyPIk/FMzmhj0By7lSAIiSh8d9MfjP7XPvoTr4ggi//GAq3oTb6q/xaSbg/wIK1aibh3uzVtAcHPh9JCI0iUjDfpzMYHWXlajHhC9qIlq4GA3po4Q0aS50kTlc450QVlI6su5j6tpQGkYQnVum9glHJkQNMboVOVSuSi3QsC98jaG5Z5LLF4GbVqJSEFJfgQ/whKU4PcycAbNe7oBsbSClYxopd5O6JkPoSJqnNNkYl/DfXXe5iRTE="
-
+    branches: master
 
 jdk:
   - oraclejdk8
@@ -22,7 +22,7 @@ install:
 
 script:
   - bash scripts/run_tests.sh
-  - sonar-scanner
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner; fi'
 
 cache:
   directories:
