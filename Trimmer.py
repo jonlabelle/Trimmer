@@ -337,7 +337,10 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
             [u'[ ]', u'  '],
             [u'[   ]', u' '],
             [u'[«]', u'<<'],
-            [u'[»]', u'>>']
+            [u'[»]', u'>>'],
+            [u'[©]', u'(C)'],
+            [u'[®]', u'(R)'],
+            [u'[™]', u'(TM)']
         ]
 
         for replacement in smart_replacements:

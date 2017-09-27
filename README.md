@@ -28,21 +28,25 @@
 
 A **Replace Smart Characters** command that performs the following actions:
 
-* **Smart single quotes:** `’` *to* `'`
-* **Smart double quotes:** `“` *to* `"`
-* **German quotes:** `„` *to* `"` and `‚` *to* `'`
-* **Ellipsis:** `…` *to* `...`
-* **Em dash:** `—` *to* `---`
-* **En dash:** `–` *to* `--`
-* **Middle dot:** `•` *to* `*`
-* **Bullet:** `·` *to* `-`
-* **Em space** *to* three spaces
-* **En space** *to* two spaces
-* **Non-breaking space** *to* one space
-* **Thin space** *to* one space
-* **Hair space** *to* one space
-* **Left angle quote**: `«` *to* `<<`
-* **Right angle quote**: `»` *to* `>>`
+- **Smart single quotes:** `’` *to* `'`
+- **Smart double quotes:** `“` *to* `"`
+- **German quotes:** `„` *to* `"` and `‚` *to* `'`
+- **Ellipsis:** `…` *to* `...`
+- **Em dash:** `—` *to* `---`
+- **En dash:** `–` *to* `--`
+- **Middle dot:** `•` *to* `*`
+- **Bullet:** `·` *to* `-`
+- **Em space** *to* three spaces
+- **En space** *to* two spaces
+- **Non-breaking space** *to* one space
+- **Thin space** *to* one space
+- **Hair space** *to* one space
+- **Left angle quote**: `«` *to* `<<`
+- **Right angle quote**: `»` *to* `>>`
+- **Copyright symbol** `©` *to* `(C)`
+- **Trademark symbol** `™` *to* `(T)`
+- **Registered trademark symbol** `®` *to* `(R)`
+
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
 
