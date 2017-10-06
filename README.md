@@ -41,12 +41,11 @@ A **Replace Smart Characters** command that performs the following actions:
 - **Non-breaking space** *to* one space
 - **Thin space** *to* one space
 - **Hair space** *to* one space
-- **Left angle quote**: `«` *to* `<<`
-- **Right angle quote**: `»` *to* `>>`
-- **Copyright symbol** `©` *to* `(C)`
-- **Trademark symbol** `™` *to* `(T)`
-- **Registered trademark symbol** `®` *to* `(R)`
-
+- **Left angle quote:** `«` *to* `<<`
+- **Right angle quote:** `»` *to* `>>`
+- **Copyright symbol:** `©` *to* `(C)`
+- **Trademark symbol:** `™` *to* `(T)`
+- **Registered trademark symbol:** `®` *to* `(R)`
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
 
