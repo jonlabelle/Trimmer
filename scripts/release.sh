@@ -1,54 +1,62 @@
 #!/usr/bin/env bash
 
 ##
-# Release tasks bulked into one script w/ user
-# intervention/confirmation required.
+# Release tasks bulked into one script w/ user intervention/confirmation
+# required.
 #
+# - Commit and push the change (to master).
 # - Create and push passed <semver> arg (1) git tag.
 #
 # Usage:
 #
-# From the 'master' branch... run:
+#   $ release.sh [options] [version]
 #
-#     release.sh <semver>
+# Examples:
 #
-# Example:
+#   To bump and tag to the specified version (1.2.1):
+#       $ release.sh 1.2.1
 #
-#     bash release.sh 1.2.1
+#   To bump and tag automatically incrementing to the next minor version:
+#       $ release.sh --next
 ##
 
 set -e
 
 VERSION=$1
 PREVIOUS_VERSION="$(git describe --abbrev=0 --tags)"
+NEXT_VERSION="${PREVIOUS_VERSION%.*}.$((${PREVIOUS_VERSION##*.}+1))"
 
 readonly SCRIPTSDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 readonly SCRIPTNAME="$(basename "${BASH_SOURCE[0]}")"
 
 
 show_info() {
-    local msg="$1"
-    echo -e "\e[36m${1}\e[0m"
+    echo -e "\\e[36m${1}\\e[0m"
 }
 
 show_success() {
-    local msg="$1"
-    echo -e "\e[32m${msg}\e[0m"
+    echo -e "\\e[32m${1}\\e[0m"
 }
 
 show_warning() {
-    local msg="$1"
-    echo -e "\e[33mwarning\e[0m : ${1}"
+    echo -e "\\e[33m${1}\\e[0m"
 }
 
 show_error() {
-    local msg="$1"
-    echo -e "\e[31merror\e[0m : ${1}"
+    echo -e "\\e[31mError:\\e[0m ${1}"
 }
 
 
 show_usage() {
-    echo "Usage: bash $SCRIPTNAME <semver/version>"
+    echo
+    echo "Usage: $SCRIPTNAME [options] [version]"
+    echo
+    echo "Release tasks bulked into one script."
+    echo
+    echo "OPTIONS"
+    echo "    -n, --next    auto-increment to the next minor version"
+    echo "    -h, --help    show usage"
+    echo
 }
 
 cd_project_root() {
@@ -83,7 +91,7 @@ ensure_git_branch_is_up_to_date() {
     local git_local_hash="$(git rev-parse --verify origin/master)"
     local git_remote_hash="$(git ls-remote origin master | cut -d$'\t' -f 1)"
     if [ "$git_local_hash" != "$git_remote_hash" ]; then
-        show_error "git remote history differs. please pull remote changes first."then
+        show_error "git remote history differs. please pull remote changes first."
         exit 1
     fi
 }
@@ -131,10 +139,17 @@ main() {
 }
 
 if [ $# -eq 0 ]; then
-    show_error "a valid semver number for the new release is required."
+    show_error "a valid semver number for the new release is required"
+    echo "Currently, the latest release is '$(show_success "${PREVIOUS_VERSION}")'"
     show_usage
-    echo "Currently, the latest release is '$(show_success ${PREVIOUS_VERSION})'."
     exit 1
 else
+    if [ "$1" = "-n" ] || [ "$1" = "--next" ]; then
+        VERSION=$NEXT_VERSION
+    fi
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+        show_usage
+        exit 0
+    fi
     main
 fi
