@@ -293,19 +293,23 @@ class RemoveComments(sublime_plugin.TextCommand):
         view = self.view
         has_matches = False
 
-        #
-        # TODO: rework this brute force approach and filter by syntax/scope
-        re_single_line_comments = re.compile(r"//.*$", re.MULTILINE)
-        re_hash_comments = re.compile("#[^!].*$", re.MULTILINE)
-        re_html_comments = re.compile("<!--.*?-->", re.DOTALL)
-        re_block_comments = re.compile(r"/\*.*?\*/", re.DOTALL)
+        re_single_line_comment = re.compile(r"//.*$", re.MULTILINE)
+        re_hash_comment = re.compile("#[^!].*$", re.MULTILINE)
+        re_html_comment = re.compile("<!--.*?-->", re.DOTALL)
+        re_block_comment = re.compile(r"/\*.*?\*/", re.DOTALL)
+        re_ini_comment = re.compile(r"^(?:\s+)?;.*$", re.MULTILINE)
 
         for region in selections(view):
             str_buffer = view.substr(region)
-            trimmed = re_single_line_comments.sub('', str_buffer)
-            trimmed = re_hash_comments.sub('', trimmed)
-            trimmed = re_html_comments.sub('', trimmed)
-            trimmed = re_block_comments.sub('', trimmed)
+
+            #
+            # TODO: re-work this brute force approach and filter by syntax/scope
+            trimmed = re_single_line_comment.sub('', str_buffer)
+            trimmed = re_hash_comment.sub('', trimmed)
+            trimmed = re_html_comment.sub('', trimmed)
+            trimmed = re_block_comment.sub('', trimmed)
+            trimmed = re_ini_comment.sub('', trimmed)
+
             if str_buffer != trimmed:
                 view.replace(edit, region, trimmed)
                 has_matches = True
