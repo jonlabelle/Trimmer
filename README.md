@@ -34,8 +34,8 @@ A **Replace Smart Characters** command that performs the following actions:
 - **Ellipsis:** `…` *to* `...`
 - **Em dash:** `—` *to* `---`
 - **En dash:** `–` *to* `--`
-- **Middle dot:** `•` *to* `*`
-- **Bullet:** `·` *to* `-`
+- **Bullet:** `•` and `o` *to* `*`
+- **Middle dot:** `·` *to* `-`
 - **Em space** *to* three spaces
 - **En space** *to* two spaces
 - **Non-breaking space** *to* one space
