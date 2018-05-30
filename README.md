@@ -2,7 +2,7 @@
 
 [![Travis CI Build Status](https://travis-ci.org/jonlabelle/Trimmer.svg?branch=master)](https://travis-ci.org/jonlabelle/Trimmer)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/fdcdvfsip9d9efg3?svg=true)](https://ci.appveyor.com/project/jonlabelle/trimmer)
-[![SonarQube Quality Gate Status](https://sonarcloud.io/api/badges/gate?key=org.jonlabelle-github:Trimmer:master)](https://sonarcloud.io/dashboard/index/org.jonlabelle-github:Trimmer:master)
+[![SonarQube Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=org.jonlabelle-github%3ATrimmer%3Amaster&metric=alert_status)](https://sonarcloud.io/dashboard/index/org.jonlabelle-github:Trimmer:master)
 [![Package Control Installs](https://img.shields.io/packagecontrol/dt/Trimmer.svg?label=installs)](https://packagecontrol.io/packages/Trimmer)
 [![Latest Release](https://img.shields.io/github/tag/jonlabelle/Trimmer.svg?label=version)](https://github.com/jonlabelle/Trimmer/releases)
 
