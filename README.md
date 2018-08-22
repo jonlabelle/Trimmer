@@ -30,6 +30,8 @@ A **Replace Smart Characters** command that performs the following actions:
 
 - **Smart single quotes:** `’` *to* `'`
 - **Smart double quotes:** `“` *to* `"`
+- **Prime:** `′` *to* `'`
+- **Double Prime:** `″` *to* `"`
 - **German quotes:** `„` *to* `"` and `‚` *to* `'`
 - **Ellipsis:** `…` *to* `...`
 - **Em dash:** `—` *to* `---`

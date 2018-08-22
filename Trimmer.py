@@ -329,8 +329,8 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
         has_matches = False
 
         smart_replacements = [
-            [u'[’‘‚]', u'\''],
-            [u'[“”]', u'"'],
+            [u'[’‘′‚]', u'\''],
+            [u'[“”″]', u'"'],
             [u'[„]', u'"'],
             [u'[…]', u'...'],
             [u'[—]', u'---'],
