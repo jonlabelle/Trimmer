@@ -16,7 +16,7 @@ language: python
 
 python:
   - "2.7"
-  - "3.3"
+  - "3.4"
 
 #
 # limit clone depth to 3, to speed up build:
