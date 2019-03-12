@@ -12,12 +12,6 @@ def selections(view, default_to_all=True):
     return regions
 
 
-def contains(needle, haystack):
-    if not needle or not haystack:
-        return False
-    return needle in haystack
-
-
 class TrimmerCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
@@ -249,7 +243,6 @@ class DeleteEmptyTags(sublime_plugin.TextCommand):
 
 
 class TrimSelections(sublime_plugin.TextCommand):
-
     def run(self, edit):
         """
         Trim leading and trailing whitespace from selections.
