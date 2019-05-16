@@ -17,8 +17,11 @@ indent_style = tab
 [*.{json,yml}]
 indent_size = 2
 
-[{*.cmd,appveyor.yml}]
+[*.cmd]
+end_of_line = crlf
+
+[appveyor.yml]
 end_of_line = crlf
 
 [*.{md,txt}]
-trim_trailing_whitespaces = false
+trim_trailing_whitespace = false
