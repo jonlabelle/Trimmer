@@ -4,7 +4,7 @@
 __pycache__
 *.html
 /tmp/
-/.idea/
-/.scannerwork/
-/.env
+.idea/
+.scannerwork/
+.env
 .pytest_cache/
