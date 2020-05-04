@@ -1,3 +1,15 @@
 * text=auto
-*.cmd text eol=crlf
-appveyor.yml text eol=crlf
+
+*.cmd           text    eol=crlf
+appveyor.yml    text    eol=crlf
+.env            text
+.env.example    text
+
+# Tell Package Control to ignore packaging these files tagged w/ "export-ignore"
+# See: math2001/FileManager#41 (comment) https://github.com/math2001/FileManager/pull/41#issuecomment-554541489
+.env            export-ignore
+.env.example    export-ignore
+.gitattributes  export-ignore
+.github/        export-ignore
+screenshots/    export-ignore
+tests/          export-ignore
