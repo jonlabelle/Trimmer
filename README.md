@@ -5,6 +5,7 @@
 [![SonarQube Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=org.jonlabelle-github%3ATrimmer%3Amaster&metric=alert_status)](https://sonarcloud.io/dashboard/index/org.jonlabelle-github:Trimmer:master)
 [![Package Control Installs](https://img.shields.io/packagecontrol/dt/Trimmer.svg?label=installs)](https://packagecontrol.io/packages/Trimmer)
 [![Latest Release](https://img.shields.io/github/tag/jonlabelle/Trimmer.svg?label=version)](https://github.com/jonlabelle/Trimmer/releases)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/jonlabelle/Trimmer/blob/master/LICENSE.md)
 
 > [Trimmer](https://github.com/jonlabelle/Trimmer) is a [Sublime Text](http://www.sublimetext.com) plug-in for cleaning up whitespace.
 
