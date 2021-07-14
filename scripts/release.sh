@@ -26,6 +26,7 @@ VERSION=$1
 PREVIOUS_VERSION="$(git describe --abbrev=0 --tags)"
 NEXT_VERSION="${PREVIOUS_VERSION%.*}.$((${PREVIOUS_VERSION##*.}+1))"
 
+# shellcheck disable=SC2005
 readonly SCRIPTSDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 readonly SCRIPTNAME="$(basename "${BASH_SOURCE[0]}")"
 

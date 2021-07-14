@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 set -e
-[ "$TRAVIS" == "true" ] && set -x
 
 PIP_CMD=
 
+# shellcheck disable=SC2005
 readonly SCRIPTSDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 
 
