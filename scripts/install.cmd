@@ -8,7 +8,7 @@ set SCRIPTSDIR=%~dp0
 pushd "%SCRIPTSDIR%" && pushd ..
 
 echo. > Install pip requirements
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 popd && popd
 

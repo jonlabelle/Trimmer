@@ -1,7 +1,6 @@
 * text=auto
 
 *.cmd           text    eol=crlf
-appveyor.yml    text    eol=crlf
 .env            text
 .env.example    text
 
