@@ -1,7 +1,6 @@
 # Trimmer
 
 [![ci](https://github.com/jonlabelle/Trimmer/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jonlabelle/Trimmer/actions/workflows/ci.yml)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/jonlabelle/Trimmer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/jonlabelle/Trimmer/context:python)
 [![Package Control Installs](https://img.shields.io/packagecontrol/dt/Trimmer.svg?label=installs)](https://packagecontrol.io/packages/Trimmer)
 [![Latest Release](https://img.shields.io/github/tag/jonlabelle/Trimmer.svg?label=version)](https://github.com/jonlabelle/Trimmer/releases)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/jonlabelle/Trimmer/blob/master/LICENSE.md)
