@@ -35,7 +35,7 @@ class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
         has_matches = False
-        reobj = re.compile('^[ \t]*$\r?\n', re.MULTILINE)
+        reobj = re.compile('^[ \t]*$\r?\n|\\s*\\Z', re.MULTILINE)
 
         for region in selections(view):
             str_buffer = view.substr(region)
