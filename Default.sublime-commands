@@ -54,5 +54,9 @@
 	{
 		"caption": "Trimmer: Remove comments.",
 		"command": "remove_comments"
+	},
+	{
+		"caption": "Trimmer: Delete adjacent duplicate lines.",
+		"command": "delete_adjacent_duplicate_lines"
 	}
 ]

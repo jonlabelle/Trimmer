@@ -22,31 +22,32 @@
 - Tokenize a string by collapsing consecutive spaces, and trimming leading and trailing spaces.
 - Delete empty, whitespace only HTML and XML tags.
 - Remove code comments and collapse lines.
+- Delete adjacent duplicate lines.
 
 ## Additional Features
 
 A **Replace Smart Characters** command that performs the following actions:
 
-- **Smart single quotes:** `’` *to* `'`
-- **Smart double quotes:** `“` *to* `"`
-- **Prime:** `′` *to* `'`
-- **Double Prime:** `″` *to* `"`
-- **German quotes:** `„` *to* `"` and `‚` *to* `'`
-- **Ellipsis:** `…` *to* `...`
-- **Em dash:** `—` *to* `---`
-- **En dash:** `–` *to* `--`
-- **Bullet:** `•` *to* `*`
-- **Middle dot:** `·` *to* `-`
-- **Em space** *to* three spaces
-- **En space** *to* two spaces
-- **Non-breaking space** *to* one space
-- **Thin space** *to* one space
-- **Hair space** *to* one space
-- **Left angle quote:** `«` *to* `<<`
-- **Right angle quote:** `»` *to* `>>`
-- **Copyright symbol:** `©` *to* `(C)`
-- **Trademark symbol:** `™` *to* `(T)`
-- **Registered trademark symbol:** `®` *to* `(R)`
+- **Smart single quotes:** `’` _to_ `'`
+- **Smart double quotes:** `“` _to_ `"`
+- **Prime:** `′` _to_ `'`
+- **Double Prime:** `″` _to_ `"`
+- **German quotes:** `„` _to_ `"` and `‚` _to_ `'`
+- **Ellipsis:** `…` _to_ `...`
+- **Em dash:** `—` _to_ `---`
+- **En dash:** `–` _to_ `--`
+- **Bullet:** `•` _to_ `*`
+- **Middle dot:** `·` _to_ `-`
+- **Em space** _to_ three spaces
+- **En space** _to_ two spaces
+- **Non-breaking space** _to_ one space
+- **Thin space** _to_ one space
+- **Hair space** _to_ one space
+- **Left angle quote:** `«` _to_ `<<`
+- **Right angle quote:** `»` _to_ `>>`
+- **Copyright symbol:** `©` _to_ `(C)`
+- **Trademark symbol:** `™` _to_ `(T)`
+- **Registered trademark symbol:** `®` _to_ `(R)`
 
 ![ScreenShot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
 
@@ -63,7 +64,7 @@ The easiest, and recommended way to install Trimmer is using [Package Control](h
 From the main application menu, navigate to:
 
 - `Tools` -> `Command Palette...` -> `Package Control: Install Package`, type
-  the word ***Trimmer***, then select it to complete installation.
+  the word **_Trimmer_**, then select it to complete installation.
 
 ### Git
 
@@ -86,9 +87,9 @@ Sublime Text packages directory.
 
 **Default Sublime Text Packages Paths:**
 
-* **OS X:** `~/Library/Application Support/Sublime Text [2|3]/Packages`
-* **Linux:** `~/.Sublime Text [2|3]/Packages`
-* **Windows:** `%APPDATA%/Sublime Text [2|3]/Packages`
+- **OS X:** `~/Library/Application Support/Sublime Text [2|3]/Packages`
+- **Linux:** `~/.Sublime Text [2|3]/Packages`
+- **Windows:** `%APPDATA%/Sublime Text [2|3]/Packages`
 
 > **NOTE** Replace the `[2|3]` part with the appropriate Sublime Text
 > version for your installation.
@@ -96,14 +97,14 @@ Sublime Text packages directory.
 ## Usage
 
 All commands are accessible from the **Command Palette** using prefix
-***Trimmer***, and in the **Main Menu** under `Edit` -> `Line` -> *Trimmer* command.
+**_Trimmer_**, and in the **Main Menu** under `Edit` -> `Line` -> _Trimmer_ command.
 
 - [Command Palette screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/command_palette.png)
 - [Main Menu screenshot](https://raw.githubusercontent.com/jonlabelle/Trimmer/master/screenshots/main_menu.png)
 
 ### Key Bindings
 
-The *default* key binding will trim trailing whitespace at the end of each of
+The _default_ key binding will trim trailing whitespace at the end of each of
 line (entire file).
 
 - **OS X**: `Ctrl + S`
@@ -112,8 +113,8 @@ line (entire file).
 
 ### Trimmer Command API
 
-|              Command               |                                              Description                                               |          Context          |
-|------------------------------------|--------------------------------------------------------------------------------------------------------|---------------------------|
+| Command                            | Description                                                                                            | Context                   |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------- |
 | `trimmer`                          | trim whitespace at the end of each line                                                                | entire file               |
 | `trim_leading_whitespace`          | trim whitespace at the start of each line                                                              | selection, or entire file |
 | `trim_leading_trailing_whitespace` | trim whitespace at the start and end of each line                                                      | selection, or entire file |
@@ -128,6 +129,7 @@ line (entire file).
 | `tokenize_string`                  | convert a string to a token by collapsing consecutive spaces, and trimming leading and trailing spaces | selection, or entire file |
 | `delete_empty_tags`                | delete empty, whitespace only html and xml tags                                                        | selection, or entire file |
 | `remove_comments`                  | remove code comments and collapse lines                                                                | selection, or entire file |
+| `delete_adjacent_duplicate_lines`  | delete adjacent duplicate lines                                                                        | selection, or entire file |
 
 ## Author
 
