@@ -58,6 +58,11 @@
 						"caption": "Remove Blank Spaces"
 					},
 					{
+						"command": "delete_adjacent_duplicate_lines",
+						"id": "delete-adjacent-duplicate-lines",
+						"caption": "Delete adjacent duplicate lines"
+					},
+					{
 						"caption": "-"
 					}
 				]
