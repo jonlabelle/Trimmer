@@ -343,23 +343,23 @@ class ReplaceSmartCharactersCommand(sublime_plugin.TextCommand):
         has_matches = False
 
         smart_replacements = [
-            [u'[’‘′‚]', u'\''],
-            [u'[“”″]', u'"'],
-            [u'[„]', u'"'],
-            [u'[…]', u'...'],
-            [u'[—]', u'---'],
-            [u'[–]', u'--'],
-            [u'[•]', u'*'],
-            [u'[·]', u'-'],
-            [u'[ ]', u'   '],
-            [u'[ ]', u'  '],
-            [u'[   ]', u' '],
-            [u'[ ]', u' '],
-            [u'[«]', u'<<'],
-            [u'[»]', u'>>'],
-            [u'[©]', u'(C)'],
-            [u'[®]', u'(R)'],
-            [u'[™]', u'(TM)']
+            [u'[’‘′‚]', u'\''],     # smart single quotes and prime
+            [u'[“”″]', u'"'],       # smart double quotes and double prime
+            [u'[„]', u'"'],         # double low-9 quotation mark
+            [u'[…]', u'...'],       # horizontal ellipsis
+            [u'[—]', u'---'],       # em dash
+            [u'[–]', u'--'],        # en dash
+            [u'[•]', u'*'],         # bullet
+            [u'[·]', u'-'],         # middle dot
+            [u'[ ]', u'   '],      # em space (3 spaces)
+            [u'[ ]', u'  '],        # en space (2 spaces)
+            [u'[   ]', u' '],        # three-per-em space
+            [u'[ ]', u' '],         # thin space
+            [u'[«]', u'<<'],        # left-pointing double angle quotation mark
+            [u'[»]', u'>>'],        # right-pointing double angle quotation mark
+            [u'[©]', u'(C)'],       # copyright sign
+            [u'[®]', u'(R)'],       # registered sign
+            [u'[™]', u'(TM)']       # trade mark sign
         ]
 
         for replacement in smart_replacements:
