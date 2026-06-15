@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=jonlabelle&project=Trimmer&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # Trimmer
 
 [![ci](https://github.com/jonlabelle/Trimmer/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jonlabelle/Trimmer/actions/workflows/ci.yml)
